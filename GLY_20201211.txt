@@ -1,6 +1,6 @@
 Quantify Compound Summary Report 
 
-Printed Wed Feb 02 11:09:36 2022
+Printed Fri Oct 08 13:18:00 2021
 
 Compound 1:  GLY_FOMC_qn
 
