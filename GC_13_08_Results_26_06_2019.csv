@@ -1,0 +1,1473 @@
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Chlorothalonil I,14.934,39,38
+4,Cal 0.125,Chlorothalonil I,14.951,-10,2
+5,Cal 0.25,Chlorothalonil I,14.913,6,36
+6,Cal 0.5,Chlorothalonil I,14.968,51,38
+7,Cal 1,Chlorothalonil I,14.922,133,52
+8,Cal 5,Chlorothalonil I,14.93,250,183
+9,Cal 10,Chlorothalonil I,14.934,370,374
+10,Cal 25,Chlorothalonil I,14.93,1200,1044
+11,Cal 5,Chlorothalonil I,14.926,262,205
+12,Blanck chemical,Chlorothalonil I,14.901,47,33
+13,QC 0,Chlorothalonil I,14.918,13,75
+14,QC 0.5,Chlorothalonil I,14.959,32,-17
+15,QC 1,Chlorothalonil I,14.893,23,-23
+16,QC 2.5,Chlorothalonil I,14.93,44,26
+17,QC 5,Chlorothalonil I,14.943,54,230
+18,QC 10,Chlorothalonil I,14.93,82,84
+19,Cal 5,Chlorothalonil I,14.938,213,175
+20,31110 A,Chlorothalonil I,14.93,30,
+21,31110 Spike,Chlorothalonil I,14.934,82,
+22,31111 A,Chlorothalonil I,15.043,198,53
+23,31111 B,Chlorothalonil I,15.001,60,
+24,31120,Chlorothalonil I,15.039,89,115
+25,31121,Chlorothalonil I,14.926,57,
+26,31130,Chlorothalonil I,14.863,68,13
+27,31131,Chlorothalonil I,15.005,608,185
+28,31210,Chlorothalonil I,14.938,323,258
+29,31211,Chlorothalonil I,14.926,241,232
+30,Cal 5,Chlorothalonil I,14.922,223,181
+31,31220,Chlorothalonil I,14.926,267,232
+32,31221,Chlorothalonil I,14.926,108,114
+33,31230,Chlorothalonil I,14.926,101,70
+34,31231,Chlorothalonil I,14.93,186,125
+35,31310,Chlorothalonil I,,,
+36,31311,Chlorothalonil I,15.039,259,216
+37,31320,Chlorothalonil I,15.018,218,124
+38,31321,Chlorothalonil I,14.93,8,
+39,31330,Chlorothalonil I,14.934,13,
+40,31331,Chlorothalonil I,14.905,18,
+41,Cal 5,Chlorothalonil I,14.934,263,167
+42,32110 A,Chlorothalonil I,15.005,430,24
+43,32110 B,Chlorothalonil I,14.938,92,55
+44,32111 A,Chlorothalonil I,15.014,0,0
+45,32111 Spike,Chlorothalonil I,15.018,89,112
+46,32120,Chlorothalonil I,15.047,157,42
+47,32121,Chlorothalonil I,14.947,16,
+48,32130,Chlorothalonil I,15.001,271,11
+49,32131,Chlorothalonil I,15.001,20,
+50,32210,Chlorothalonil I,14.93,75,187
+51,32211,Chlorothalonil I,14.922,40,19
+52,Cal 5,Chlorothalonil I,14.93,207,156
+53,32220,Chlorothalonil I,15.014,56,9
+54,32221,Chlorothalonil I,14.934,10,
+55,32230,Chlorothalonil I,15.018,0,0
+56,32231,Chlorothalonil I,15.026,0,0
+57,32310,Chlorothalonil I,15.001,0,0
+58,32311,Chlorothalonil I,14.934,82,
+59,32320,Chlorothalonil I,15.005,162,60
+60,32321,Chlorothalonil I,14.918,20,32
+61,32330,Chlorothalonil I,14.918,25,
+62,32331,Chlorothalonil I,15.035,89,68
+63,Cal 5,Chlorothalonil I,14.938,315,187
+64,33110 A,Chlorothalonil I,14.913,27,57
+65,33110 Spike,Chlorothalonil I,15.009,116,
+66,33111 A,Chlorothalonil I,14.926,5,156
+67,33111 B,Chlorothalonil I,15.009,87,123
+68,33120,Chlorothalonil I,14.951,14,
+69,33121,Chlorothalonil I,14.934,48,12
+70,33130,Chlorothalonil I,14.801,24,39
+71,33131,Chlorothalonil I,14.901,43,
+72,33210,Chlorothalonil I,15.009,0,0
+73,33211,Chlorothalonil I,15.026,0,0
+74,Cal 5,Chlorothalonil I,14.918,109,186
+75,Cal 5 II,Chlorothalonil I,14.913,124,113
+76,33220,Chlorothalonil I,,,
+77,33221,Chlorothalonil I,14.934,15,
+78,33230,Chlorothalonil I,15.009,50,
+79,33231,Chlorothalonil I,15.047,198,173
+80,33310,Chlorothalonil I,14.913,20,37
+81,33311,Chlorothalonil I,15.026,0,0
+82,33320,Chlorothalonil I,15.014,0,0
+83,33321,Chlorothalonil I,15.035,0,0
+84,33330,Chlorothalonil I,15.009,0,0
+85,33331,Chlorothalonil I,14.93,13,
+86,Cal 5 II,Chlorothalonil I,14.938,231,125
+87,Blanck chemical II,Chlorothalonil I,15.014,71,112
+88,QC 0 II,Chlorothalonil I,14.918,55,68
+89,QC 0.5 II,Chlorothalonil I,15.043,0,0
+90,QC 1 II,Chlorothalonil I,14.888,70,
+91,QC 2.5 II,Chlorothalonil I,14.905,57,51
+92,QC 5 II,Chlorothalonil I,14.888,142,72
+93,QC 10 II,Chlorothalonil I,14.901,65,20
+94,Cal 5 II,Chlorothalonil I,14.922,198,174
+95,21110 A,Chlorothalonil I,14.859,8,
+96,21110 Spike,Chlorothalonil I,14.93,33,
+97,21111 A,Chlorothalonil I,15.018,94,126
+98,21111 B,Chlorothalonil I,15.014,170,102
+99,21120,Chlorothalonil I,15.035,0,0
+100,21121,Chlorothalonil I,15.022,200,43
+101,21130,Chlorothalonil I,15.06,0,0
+102,21131,Chlorothalonil I,,,
+103,21210,Chlorothalonil I,14.901,0,
+104,21211,Chlorothalonil I,14.876,0,0
+105,Cal 5 II,Chlorothalonil I,14.918,130,108
+106,21220,Chlorothalonil I,14.938,6,21
+107,21221,Chlorothalonil I,14.88,27,
+108,21230,Chlorothalonil I,14.842,12,
+109,21231,Chlorothalonil I,15.018,0,0
+110,21310,Chlorothalonil I,15.03,0,0
+111,21311,Chlorothalonil I,15.014,0,0
+112,21320,Chlorothalonil I,15.039,0,0
+113,21321,Chlorothalonil I,15.005,0,0
+114,21330,Chlorothalonil I,15.03,0,0
+115,21331,Chlorothalonil I,,,
+116,Cal 5 II,Chlorothalonil I,14.922,0,0
+117,Cal 5 II 1,Chlorothalonil I,15.039,0,0
+118,22110 A,Chlorothalonil I,15.005,0,0
+119,22110 B,Chlorothalonil I,14.909,0,0
+120,22111 A,Chlorothalonil I,15.064,219,50
+121,22111 Spike,Chlorothalonil I,15.018,0,0
+122,22120,Chlorothalonil I,15.014,0,0
+123,22121,Chlorothalonil I,15.056,0,0
+124,22130,Chlorothalonil I,15.014,0,0
+125,22131,Chlorothalonil I,15.001,0,0
+126,22210,Chlorothalonil I,15.014,0,0
+127,22211,Chlorothalonil I,14.951,37,
+128,Cal 5 II 1,Chlorothalonil I,14.926,99,58
+129,22220,Chlorothalonil I,15.005,0,
+130,22221,Chlorothalonil I,15.039,0,0
+131,22230,Chlorothalonil I,15.026,0,0
+132,22231,Chlorothalonil I,15.051,0,0
+133,22310,Chlorothalonil I,15.064,0,
+134,Cal 5 II 1,Chlorothalonil I,14.909,139,110
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Chlorothalonil II,15.243,1,-61
+4,Cal 0.125,Chlorothalonil II,15.226,43,10
+5,Cal 0.25,Chlorothalonil II,15.218,14,54
+6,Cal 0.5,Chlorothalonil II,15.197,109,41
+7,Cal 1,Chlorothalonil II,15.259,83,86
+8,Cal 5,Chlorothalonil II,15.205,263,238
+9,Cal 10,Chlorothalonil II,15.209,485,427
+10,Cal 25,Chlorothalonil II,15.205,3889,3445
+11,Cal 5,Chlorothalonil II,15.205,368,221
+12,Blanck chemical,Chlorothalonil II,15.234,-19,42
+13,QC 0,Chlorothalonil II,15.18,20,-3
+14,QC 0.5,Chlorothalonil II,15.192,41,-3
+15,QC 1,Chlorothalonil II,15.23,16,12
+16,QC 2.5,Chlorothalonil II,15.213,-11,-8
+17,QC 5,Chlorothalonil II,15.197,27,11
+18,QC 10,Chlorothalonil II,15.247,32,8
+19,Cal 5,Chlorothalonil II,15.213,253,255
+20,31110 A,Chlorothalonil II,15.209,69,
+21,31110 Spike,Chlorothalonil II,15.201,7,
+22,31111 A,Chlorothalonil II,,,
+23,31111 B,Chlorothalonil II,15.085,116,
+24,31120,Chlorothalonil II,15.085,147,20
+25,31121,Chlorothalonil II,15.093,131,143
+26,31130,Chlorothalonil II,15.188,13,
+27,31131,Chlorothalonil II,15.068,287,126
+28,31210,Chlorothalonil II,15.176,-17,21
+29,31211,Chlorothalonil II,15.184,26,-42
+30,Cal 5,Chlorothalonil II,15.197,151,147
+31,31220,Chlorothalonil II,15.197,-39,34
+32,31221,Chlorothalonil II,15.23,-37,22
+33,31230,Chlorothalonil II,15.243,-1,-7
+34,31231,Chlorothalonil II,15.197,-10,70
+35,31310,Chlorothalonil II,15.081,75,64
+36,31311,Chlorothalonil II,15.238,48,171
+37,31320,Chlorothalonil II,15.255,51,
+38,31321,Chlorothalonil II,15.247,98,-45
+39,31330,Chlorothalonil II,15.213,38,47
+40,31331,Chlorothalonil II,15.097,75,20
+41,Cal 5,Chlorothalonil II,15.205,80,81
+42,32110 A,Chlorothalonil II,15.085,96,
+43,32110 B,Chlorothalonil II,15.184,-12,-12
+44,32111 A,Chlorothalonil II,15.077,0,0
+45,32111 Spike,Chlorothalonil II,15.192,103,
+46,32120,Chlorothalonil II,15.077,150,109
+47,32121,Chlorothalonil II,15.142,32,
+48,32130,Chlorothalonil II,15.334,10,35
+49,32131,Chlorothalonil II,15.192,25,
+50,32210,Chlorothalonil II,15.243,42,43
+51,32211,Chlorothalonil II,15.238,10,
+52,Cal 5,Chlorothalonil II,15.192,79,106
+53,32220,Chlorothalonil II,15.188,70,
+54,32221,Chlorothalonil II,15.172,14,10
+55,32230,Chlorothalonil II,15.068,0,0
+56,32231,Chlorothalonil II,15.326,15,6
+57,32310,Chlorothalonil II,15.093,178,97
+58,32311,Chlorothalonil II,15.226,11,
+59,32320,Chlorothalonil II,15.089,186,89
+60,32321,Chlorothalonil II,15.085,83,71
+61,32330,Chlorothalonil II,15.072,103,33
+62,32331,Chlorothalonil II,15.081,107,90
+63,Cal 5,Chlorothalonil II,15.201,79,44
+64,33110 A,Chlorothalonil II,15.072,59,77
+65,33110 Spike,Chlorothalonil II,15.222,35,5
+66,33111 A,Chlorothalonil II,15.097,92,138
+67,33111 B,Chlorothalonil II,15.234,8,
+68,33120,Chlorothalonil II,15.093,88,115
+69,33121,Chlorothalonil II,15.081,0,0
+70,33130,Chlorothalonil II,15.077,0,0
+71,33131,Chlorothalonil II,15.077,0,0
+72,33210,Chlorothalonil II,15.201,52,
+73,33211,Chlorothalonil II,15.085,0,0
+74,Cal 5,Chlorothalonil II,15.192,159,144
+75,Cal 5 II,Chlorothalonil II,15.201,45,
+76,33220,Chlorothalonil II,15.322,13,4
+77,33221,Chlorothalonil II,15.076,43,98
+78,33230,Chlorothalonil II,15.234,31,
+79,33231,Chlorothalonil II,,,
+80,33310,Chlorothalonil II,15.064,0,0
+81,33311,Chlorothalonil II,15.093,0,0
+82,33320,Chlorothalonil II,15.097,0,
+83,33321,Chlorothalonil II,15.076,0,0
+84,33330,Chlorothalonil II,15.222,0,
+85,33331,Chlorothalonil II,15.085,66,113
+86,Cal 5 II,Chlorothalonil II,15.085,67,36
+87,Blanck chemical II,Chlorothalonil II,15.255,15,
+88,QC 0 II,Chlorothalonil II,15.222,70,
+89,QC 0.5 II,Chlorothalonil II,15.113,32,
+90,QC 1 II,Chlorothalonil II,15.23,9,8
+91,QC 2.5 II,Chlorothalonil II,15.23,36,-37
+92,QC 5 II,Chlorothalonil II,15.234,150,132
+93,QC 10 II,Chlorothalonil II,15.201,23,14
+94,Cal 5 II,Chlorothalonil II,15.18,65,17
+95,21110 A,Chlorothalonil II,15.093,136,
+96,21110 Spike,Chlorothalonil II,15.192,5,
+97,21111 A,Chlorothalonil II,15.089,74,82
+98,21111 B,Chlorothalonil II,15.238,13,144
+99,21120,Chlorothalonil II,15.068,0,
+100,21121,Chlorothalonil II,15.081,0,0
+101,21130,Chlorothalonil II,,,
+102,21131,Chlorothalonil II,15.259,22,
+103,21210,Chlorothalonil II,15.068,93,50
+104,21211,Chlorothalonil II,15.097,0,0
+105,Cal 5 II,Chlorothalonil II,15.222,60,24
+106,21220,Chlorothalonil II,15.085,104,66
+107,21221,Chlorothalonil II,15.192,12,24
+108,21230,Chlorothalonil II,15.089,103,88
+109,21231,Chlorothalonil II,15.284,18,
+110,21310,Chlorothalonil II,15.305,6,
+111,21311,Chlorothalonil II,15.081,40,107
+112,21320,Chlorothalonil II,,,
+113,21321,Chlorothalonil II,15.081,0,0
+114,21330,Chlorothalonil II,15.263,17,
+115,21331,Chlorothalonil II,15.097,0,0
+116,Cal 5 II,Chlorothalonil II,15.097,0,0
+117,Cal 5 II 1,Chlorothalonil II,15.068,0,0
+118,22110 A,Chlorothalonil II,15.234,0,0
+119,22110 B,Chlorothalonil II,15.081,0,
+120,22111 A,Chlorothalonil II,15.064,0,0
+121,22111 Spike,Chlorothalonil II,15.093,0,0
+122,22120,Chlorothalonil II,15.081,0,0
+123,22121,Chlorothalonil II,15.222,0,0
+124,22130,Chlorothalonil II,15.072,0,0
+125,22131,Chlorothalonil II,15.213,8,52
+126,22210,Chlorothalonil II,15.176,7,
+127,22211,Chlorothalonil II,15.064,0,0
+128,Cal 5 II 1,Chlorothalonil II,15.192,119,62
+129,22220,Chlorothalonil II,15.089,149,89
+130,22221,Chlorothalonil II,15.121,10,271
+131,22230,Chlorothalonil II,15.089,0,0
+132,22231,Chlorothalonil II,15.276,11,62
+133,22310,Chlorothalonil II,15.089,0,0
+134,Cal 5 II 1,Chlorothalonil II,15.184,79,
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Folpet,16.99,214,65
+4,Cal 0.125,Folpet,16.998,240,299
+5,Cal 0.25,Folpet,17.011,314,369
+6,Cal 0.5,Folpet,16.99,361,890
+7,Cal 1,Folpet,16.994,809,1654
+8,Cal 5,Folpet,16.998,2122,6177
+9,Cal 10,Folpet,16.998,7347,22137
+10,Cal 25,Folpet,16.998,17839,52854
+11,Cal 5,Folpet,16.998,2233,6907
+12,Blanck chemical,Folpet,17.04,206,42
+13,QC 0,Folpet,17.036,212,70
+14,QC 0.5,Folpet,16.973,104,72
+15,QC 1,Folpet,17.032,115,95
+16,QC 2.5,Folpet,17.002,141,78
+17,QC 5,Folpet,17.023,353,154
+18,QC 10,Folpet,16.99,265,129
+19,Cal 5,Folpet,16.998,3368,10641
+20,31110 A,Folpet,17.011,0,0
+21,31110 Spike,Folpet,,,
+22,31111 A,Folpet,17.04,27,16
+23,31111 B,Folpet,17.103,325,53
+24,31120,Folpet,17.002,23,
+25,31121,Folpet,17.111,124,5
+26,31130,Folpet,17.103,91,8
+27,31131,Folpet,17.077,187,20
+28,31210,Folpet,17.065,52,8
+29,31211,Folpet,,,
+30,Cal 5,Folpet,16.998,2479,7069
+31,31220,Folpet,17.006,0,
+32,31221,Folpet,,,
+33,31230,Folpet,16.956,101,30
+34,31231,Folpet,,,
+35,31310,Folpet,16.935,96,
+36,31311,Folpet,16.881,0,10
+37,31320,Folpet,17.015,29,
+38,31321,Folpet,17.077,43,56
+39,31330,Folpet,17.032,370,56
+40,31331,Folpet,16.99,440,90
+41,Cal 5,Folpet,16.994,2180,6917
+42,32110 A,Folpet,17.111,57,
+43,32110 B,Folpet,17.036,51,10
+44,32111 A,Folpet,17.002,157,78
+45,32111 Spike,Folpet,16.986,26,13
+46,32120,Folpet,,,
+47,32121,Folpet,16.99,40,27
+48,32130,Folpet,16.977,45,9
+49,32131,Folpet,16.965,0,
+50,32210,Folpet,17.082,0,0
+51,32211,Folpet,16.986,0,
+52,Cal 5,Folpet,16.99,1730,5400
+53,32220,Folpet,,,
+54,32221,Folpet,17.023,0,0
+55,32230,Folpet,,,
+56,32231,Folpet,16.969,0,0
+57,32310,Folpet,17.036,0,
+58,32311,Folpet,17.061,0,
+59,32320,Folpet,16.986,103,
+60,32321,Folpet,16.981,80,
+61,32330,Folpet,17.077,0,0
+62,32331,Folpet,17.077,48,22
+63,Cal 5,Folpet,16.99,2235,5870
+64,33110 A,Folpet,17.019,150,
+65,33110 Spike,Folpet,17.128,11,15
+66,33111 A,Folpet,16.998,0,
+67,33111 B,Folpet,,,
+68,33120,Folpet,17.069,13,63
+69,33121,Folpet,16.965,110,
+70,33130,Folpet,16.99,33,
+71,33131,Folpet,,,
+72,33210,Folpet,17.002,13,20
+73,33211,Folpet,17.09,63,216
+74,Cal 5,Folpet,16.994,1596,4734
+75,Cal 5 II,Folpet,16.986,453,952
+76,33220,Folpet,17.023,19,
+77,33221,Folpet,17.077,39,10
+78,33230,Folpet,,,
+79,33231,Folpet,17.015,11,26
+80,33310,Folpet,17.002,60,62
+81,33311,Folpet,17.019,14,59
+82,33320,Folpet,16.994,33,10
+83,33321,Folpet,17.082,33,
+84,33330,Folpet,17.027,30,13
+85,33331,Folpet,16.956,11,21
+86,Cal 5 II,Folpet,16.99,551,1108
+87,Blanck chemical II,Folpet,16.986,180,85
+88,QC 0 II,Folpet,16.994,165,18
+89,QC 0.5 II,Folpet,16.994,251,112
+90,QC 1 II,Folpet,16.96,161,96
+91,QC 2.5 II,Folpet,16.998,87,68
+92,QC 5 II,Folpet,17.006,157,74
+93,QC 10 II,Folpet,17.011,171,32
+94,Cal 5 II,Folpet,16.986,404,1266
+95,21110 A,Folpet,17.044,62,
+96,21110 Spike,Folpet,17.011,147,66
+97,21111 A,Folpet,16.952,36,12
+98,21111 B,Folpet,16.935,8,
+99,21120,Folpet,16.927,23,29
+100,21121,Folpet,17.006,34,
+101,21130,Folpet,17.027,54,20
+102,21131,Folpet,,,
+103,21210,Folpet,16.906,60,15
+104,21211,Folpet,,,
+105,Cal 5 II,Folpet,16.99,566,1636
+106,21220,Folpet,16.96,97,28
+107,21221,Folpet,16.906,170,90
+108,21230,Folpet,17.036,126,
+109,21231,Folpet,17.077,214,
+110,21310,Folpet,17.036,104,
+111,21311,Folpet,,,
+112,21320,Folpet,,,
+113,21321,Folpet,17.044,99,5
+114,21330,Folpet,17.048,113,
+115,21331,Folpet,17.111,77,27
+116,Cal 5 II,Folpet,16.99,752,1922
+117,Cal 5 II 1,Folpet,16.994,233,420
+118,22110 A,Folpet,16.998,111,12
+119,22110 B,Folpet,17.011,24,
+120,22111 A,Folpet,17.052,26,5
+121,22111 Spike,Folpet,17.002,83,86
+122,22120,Folpet,16.864,41,
+123,22121,Folpet,16.881,25,
+124,22130,Folpet,16.981,80,4
+125,22131,Folpet,16.94,58,28
+126,22210,Folpet,17.04,203,
+127,22211,Folpet,,,
+128,Cal 5 II 1,Folpet,16.99,350,423
+129,22220,Folpet,17.023,0,10
+130,22221,Folpet,16.977,0,10
+131,22230,Folpet,,,
+132,22231,Folpet,16.99,0,0
+133,22310,Folpet,,,
+134,Cal 5 II 1,Folpet,16.99,277,370
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Cyfluthrin I,21.972,2324,6963
+4,Cal 0.125,Cyfluthrin I,21.96,4489,6111
+5,Cal 0.25,Cyfluthrin I,21.968,3778,8054
+6,Cal 0.5,Cyfluthrin I,21.96,5339,6709
+7,Cal 1,Cyfluthrin I,21.964,10001,10949
+8,Cal 5,Cyfluthrin I,21.964,45909,34444
+9,Cal 10,Cyfluthrin I,21.964,91852,69100
+10,Cal 25,Cyfluthrin I,21.964,233098,161164
+11,Cal 5,Cyfluthrin I,21.964,48857,36932
+12,Blanck chemical,Cyfluthrin I,21.93,3095,4684
+13,QC 0,Cyfluthrin I,21.96,1558,4060
+14,QC 0.5,Cyfluthrin I,21.956,4833,7282
+15,QC 1,Cyfluthrin I,21.96,3175,5758
+16,QC 2.5,Cyfluthrin I,21.96,8203,8486
+17,QC 5,Cyfluthrin I,21.96,11002,10805
+18,QC 10,Cyfluthrin I,21.96,19803,14854
+19,Cal 5,Cyfluthrin I,21.96,46815,35510
+20,31110 A,Cyfluthrin I,21.951,1552,3328
+21,31110 Spike,Cyfluthrin I,21.96,10888,8890
+22,31111 A,Cyfluthrin I,21.96,2405,3795
+23,31111 B,Cyfluthrin I,21.977,2726,3683
+24,31120,Cyfluthrin I,21.96,1694,3157
+25,31121,Cyfluthrin I,21.951,2978,4673
+26,31130,Cyfluthrin I,21.972,2565,4616
+27,31131,Cyfluthrin I,21.994,2391,5423
+28,31210,Cyfluthrin I,21.943,1819,3626
+29,31211,Cyfluthrin I,21.934,913,2378
+30,Cal 5,Cyfluthrin I,21.964,42552,32066
+31,31220,Cyfluthrin I,21.985,1660,4053
+32,31221,Cyfluthrin I,21.989,2439,7645
+33,31230,Cyfluthrin I,21.985,2953,1695
+34,31231,Cyfluthrin I,22.027,475,7760
+35,31310,Cyfluthrin I,21.994,3191,4747
+36,31311,Cyfluthrin I,21.956,1643,6920
+37,31320,Cyfluthrin I,21.994,1462,4665
+38,31321,Cyfluthrin I,21.964,2620,4189
+39,31330,Cyfluthrin I,21.977,1877,3223
+40,31331,Cyfluthrin I,22.01,2378,3554
+41,Cal 5,Cyfluthrin I,21.96,40564,31601
+42,32110 A,Cyfluthrin I,21.947,2419,
+43,32110 B,Cyfluthrin I,21.964,1909,3958
+44,32111 A,Cyfluthrin I,22.002,2372,3778
+45,32111 Spike,Cyfluthrin I,21.956,10219,9484
+46,32120,Cyfluthrin I,22.002,2807,4988
+47,32121,Cyfluthrin I,21.977,1736,16393
+48,32130,Cyfluthrin I,21.93,2038,6790
+49,32131,Cyfluthrin I,21.981,1890,3046
+50,32210,Cyfluthrin I,21.977,257,3200
+51,32211,Cyfluthrin I,21.96,59,5578
+52,Cal 5,Cyfluthrin I,21.96,38709,29151
+53,32220,Cyfluthrin I,21.943,826,3510
+54,32221,Cyfluthrin I,21.994,2567,5996
+55,32230,Cyfluthrin I,22.006,2347,8303
+56,32231,Cyfluthrin I,21.981,2767,15809
+57,32310,Cyfluthrin I,21.943,1144,750
+58,32311,Cyfluthrin I,21.96,2544,6929
+59,32320,Cyfluthrin I,21.96,2273,2569
+60,32321,Cyfluthrin I,21.96,2536,2835
+61,32330,Cyfluthrin I,21.977,994,
+62,32331,Cyfluthrin I,,,
+63,Cal 5,Cyfluthrin I,21.956,41045,30771
+64,33110 A,Cyfluthrin I,21.981,2275,4647
+65,33110 Spike,Cyfluthrin I,21.956,8403,7968
+66,33111 A,Cyfluthrin I,21.939,1794,4543
+67,33111 B,Cyfluthrin I,21.964,1436,4387
+68,33120,Cyfluthrin I,,,
+69,33121,Cyfluthrin I,21.947,3214,2626
+70,33130,Cyfluthrin I,21.989,2332,2949
+71,33131,Cyfluthrin I,21.964,2335,1511
+72,33210,Cyfluthrin I,21.972,2124,3002
+73,33211,Cyfluthrin I,21.934,481,
+74,Cal 5,Cyfluthrin I,21.951,36136,27037
+75,Cal 5 II,Cyfluthrin I,21.951,27803,21040
+76,33220,Cyfluthrin I,21.994,2897,5197
+77,33221,Cyfluthrin I,22.019,3275,3980
+78,33230,Cyfluthrin I,21.93,462,2325
+79,33231,Cyfluthrin I,21.939,1353,2825
+80,33310,Cyfluthrin I,21.943,1070,2935
+81,33311,Cyfluthrin I,21.943,3439,7139
+82,33320,Cyfluthrin I,,,
+83,33321,Cyfluthrin I,21.943,2438,3119
+84,33330,Cyfluthrin I,21.956,608,
+85,33331,Cyfluthrin I,21.956,3097,6660
+86,Cal 5 II,Cyfluthrin I,21.947,28466,21020
+87,Blanck chemical II,Cyfluthrin I,21.939,1061,1851
+88,QC 0 II,Cyfluthrin I,21.964,1871,4755
+89,QC 0.5 II,Cyfluthrin I,21.947,2811,3559
+90,QC 1 II,Cyfluthrin I,21.951,3079,3679
+91,QC 2.5 II,Cyfluthrin I,21.951,4325,4348
+92,QC 5 II,Cyfluthrin I,21.951,7877,8091
+93,QC 10 II,Cyfluthrin I,21.947,13398,9764
+94,Cal 5 II,Cyfluthrin I,21.947,26378,18937
+95,21110 A,Cyfluthrin I,21.985,2298,5253
+96,21110 Spike,Cyfluthrin I,21.951,6420,5046
+97,21111 A,Cyfluthrin I,21.998,1756,2296
+98,21111 B,Cyfluthrin I,21.943,3735,1698
+99,21120,Cyfluthrin I,21.939,555,4299
+100,21121,Cyfluthrin I,,,
+101,21130,Cyfluthrin I,22.036,2635,1261
+102,21131,Cyfluthrin I,22.044,2658,2389
+103,21210,Cyfluthrin I,21.96,1195,3730
+104,21211,Cyfluthrin I,21.989,1483,5871
+105,Cal 5 II,Cyfluthrin I,21.947,26705,20402
+106,21220,Cyfluthrin I,,,
+107,21221,Cyfluthrin I,21.968,324,2709
+108,21230,Cyfluthrin I,21.994,131,3292
+109,21231,Cyfluthrin I,21.939,255,
+110,21310,Cyfluthrin I,21.939,1227,1982
+111,21311,Cyfluthrin I,21.93,1696,1324
+112,21320,Cyfluthrin I,21.968,1657,2288
+113,21321,Cyfluthrin I,21.934,365,557
+114,21330,Cyfluthrin I,21.989,2568,3467
+115,21331,Cyfluthrin I,22.032,2825,2908
+116,Cal 5 II,Cyfluthrin I,21.951,26445,20697
+117,Cal 5 II 1,Cyfluthrin I,21.947,22986,16952
+118,22110 A,Cyfluthrin I,21.981,1205,2849
+119,22110 B,Cyfluthrin I,,,
+120,22111 A,Cyfluthrin I,21.93,1332,6043
+121,22111 Spike,Cyfluthrin I,21.939,4635,3520
+122,22120,Cyfluthrin I,21.968,1019,
+123,22121,Cyfluthrin I,22.002,1872,2892
+124,22130,Cyfluthrin I,21.93,482,
+125,22131,Cyfluthrin I,21.985,1967,5207
+126,22210,Cyfluthrin I,21.972,1334,5722
+127,22211,Cyfluthrin I,21.977,1601,4164
+128,Cal 5 II 1,Cyfluthrin I,21.951,21415,17315
+129,22220,Cyfluthrin I,21.93,1074,4149
+130,22221,Cyfluthrin I,21.989,1721,3414
+131,22230,Cyfluthrin I,21.939,995,
+132,22231,Cyfluthrin I,21.947,452,3240
+133,22310,Cyfluthrin I,21.96,1236,3252
+134,Cal 5 II 1,Cyfluthrin I,21.951,22573,16350
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Cypermethrin I,21.987,6988,3156
+4,Cal 0.125,Cypermethrin I,21.999,6423,4327
+5,Cal 0.25,Cypermethrin I,21.999,8440,3481
+6,Cal 0.5,Cypermethrin I,22.008,12212,7170
+7,Cal 1,Cypermethrin I,22.012,24121,8365
+8,Cal 5,Cypermethrin I,22.012,86825,28054
+9,Cal 10,Cypermethrin I,22.008,179366,53500
+10,Cal 25,Cypermethrin I,22.008,404300,110387
+11,Cal 5,Cypermethrin I,22.008,95949,26082
+12,Blanck chemical,Cypermethrin I,22.016,6011,3379
+13,QC 0,Cypermethrin I,21.987,4533,2294
+14,QC 0.5,Cypermethrin I,22.003,5034,4027
+15,QC 1,Cypermethrin I,22.008,7769,5190
+16,QC 2.5,Cypermethrin I,22.008,10904,5364
+17,QC 5,Cypermethrin I,22.008,19818,7344
+18,QC 10,Cypermethrin I,22.008,33172,12290
+19,Cal 5,Cypermethrin I,22.008,84662,27023
+20,31110 A,Cypermethrin I,21.991,3541,695
+21,31110 Spike,Cypermethrin I,22.008,17660,8029
+22,31111 A,Cypermethrin I,,,
+23,31111 B,Cypermethrin I,22.12,0,0
+24,31120,Cypermethrin I,,,
+25,31121,Cypermethrin I,22.12,0,0
+26,31130,Cypermethrin I,,,
+27,31131,Cypermethrin I,,,
+28,31210,Cypermethrin I,22.008,7290,2976
+29,31211,Cypermethrin I,22.003,53825,16063
+30,Cal 5,Cypermethrin I,22.003,78207,20436
+31,31220,Cypermethrin I,22.012,0,0
+32,31221,Cypermethrin I,22.003,133561,46245
+33,31230,Cypermethrin I,,,
+34,31231,Cypermethrin I,22.008,106736,42829
+35,31310,Cypermethrin I,,,
+36,31311,Cypermethrin I,21.97,0,0
+37,31320,Cypermethrin I,21.94,0,
+38,31321,Cypermethrin I,22.12,0,0
+39,31330,Cypermethrin I,22.05,0,
+40,31331,Cypermethrin I,21.995,0,0
+41,Cal 5,Cypermethrin I,22.008,73434,23979
+42,32110 A,Cypermethrin I,22.112,0,0
+43,32110 B,Cypermethrin I,22.012,0,0
+44,32111 A,Cypermethrin I,22.012,10813,4753
+45,32111 Spike,Cypermethrin I,22.003,21619,6687
+46,32120,Cypermethrin I,21.978,476,
+47,32121,Cypermethrin I,22.07,0,0
+48,32130,Cypermethrin I,21.957,0,0
+49,32131,Cypermethrin I,22.05,0,0
+50,32210,Cypermethrin I,22.008,3171,3699
+51,32211,Cypermethrin I,22.008,20654,6032
+52,Cal 5,Cypermethrin I,22.003,70815,22493
+53,32220,Cypermethrin I,22.008,12044,4430
+54,32221,Cypermethrin I,22.003,58019,17093
+55,32230,Cypermethrin I,21.999,29120,10569
+56,32231,Cypermethrin I,22.003,231912,67187
+57,32310,Cypermethrin I,21.999,5588,4547
+58,32311,Cypermethrin I,22.008,11964,5465
+59,32320,Cypermethrin I,21.999,5034,6581
+60,32321,Cypermethrin I,21.999,0,0
+61,32330,Cypermethrin I,21.999,6081,4459
+62,32331,Cypermethrin I,21.991,5228,4547
+63,Cal 5,Cypermethrin I,22.003,67244,21809
+64,33110 A,Cypermethrin I,21.999,3034,2803
+65,33110 Spike,Cypermethrin I,22.003,14972,6967
+66,33111 A,Cypermethrin I,21.987,0,
+67,33111 B,Cypermethrin I,,,
+68,33120,Cypermethrin I,21.999,0,0
+69,33121,Cypermethrin I,,,
+70,33130,Cypermethrin I,22.116,4320,1968
+71,33131,Cypermethrin I,21.974,0,0
+72,33210,Cypermethrin I,22.033,13927,4188
+73,33211,Cypermethrin I,22.008,4616,796
+74,Cal 5,Cypermethrin I,21.999,54834,16729
+75,Cal 5 II,Cypermethrin I,21.999,50692,15190
+76,33220,Cypermethrin I,22.124,0,0
+77,33221,Cypermethrin I,22.124,0,0
+78,33230,Cypermethrin I,22.116,0,0
+79,33231,Cypermethrin I,22.012,0,0
+80,33310,Cypermethrin I,22.003,2590,3131
+81,33311,Cypermethrin I,21.999,62545,15235
+82,33320,Cypermethrin I,21.999,0,0
+83,33321,Cypermethrin I,21.991,0,0
+84,33330,Cypermethrin I,21.987,0,0
+85,33331,Cypermethrin I,22.112,0,
+86,Cal 5 II,Cypermethrin I,21.995,47588,15136
+87,Blanck chemical II,Cypermethrin I,21.978,3000,772
+88,QC 0 II,Cypermethrin I,22.058,3294,539
+89,QC 0.5 II,Cypermethrin I,21.987,1882,1245
+90,QC 1 II,Cypermethrin I,22.012,7903,2221
+91,QC 2.5 II,Cypermethrin I,21.991,10931,2855
+92,QC 5 II,Cypermethrin I,21.991,13812,4845
+93,QC 10 II,Cypermethrin I,21.995,22717,7767
+94,Cal 5 II,Cypermethrin I,21.995,50121,15782
+95,21110 A,Cypermethrin I,22.12,0,
+96,21110 Spike,Cypermethrin I,21.991,11866,5495
+97,21111 A,Cypermethrin I,22.05,0,
+98,21111 B,Cypermethrin I,21.974,346,
+99,21120,Cypermethrin I,21.991,0,0
+100,21121,Cypermethrin I,21.949,0,0
+101,21130,Cypermethrin I,,,
+102,21131,Cypermethrin I,21.999,0,
+103,21210,Cypermethrin I,21.944,0,0
+104,21211,Cypermethrin I,,,
+105,Cal 5 II,Cypermethrin I,21.995,43739,12467
+106,21220,Cypermethrin I,22.025,0,
+107,21221,Cypermethrin I,22.012,0,
+108,21230,Cypermethrin I,22.05,0,0
+109,21231,Cypermethrin I,21.944,0,0
+110,21310,Cypermethrin I,22.016,0,
+111,21311,Cypermethrin I,21.936,0,0
+112,21320,Cypermethrin I,22.003,3685,1682
+113,21321,Cypermethrin I,22.025,465,
+114,21330,Cypermethrin I,21.957,0,
+115,21331,Cypermethrin I,21.944,0,0
+116,Cal 5 II,Cypermethrin I,21.991,51512,12544
+117,Cal 5 II 1,Cypermethrin I,21.995,40707,13143
+118,22110 A,Cypermethrin I,22.008,0,0
+119,22110 B,Cypermethrin I,21.944,0,0
+120,22111 A,Cypermethrin I,22.112,0,
+121,22111 Spike,Cypermethrin I,21.991,8664,2774
+122,22120,Cypermethrin I,,,
+123,22121,Cypermethrin I,22.037,0,
+124,22130,Cypermethrin I,21.932,0,0
+125,22131,Cypermethrin I,21.965,0,0
+126,22210,Cypermethrin I,22.046,0,
+127,22211,Cypermethrin I,,,
+128,Cal 5 II 1,Cypermethrin I,21.995,43084,14120
+129,22220,Cypermethrin I,22.116,0,0
+130,22221,Cypermethrin I,22.033,3127,608
+131,22230,Cypermethrin I,22.016,1861,1064
+132,22231,Cypermethrin I,,,
+133,22310,Cypermethrin I,22.116,7655,13506
+134,Cal 5 II 1,Cypermethrin I,21.995,41988,12007
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Cyfluthrin II,22.131,6156,14530
+4,Cal 0.125,Cyfluthrin II,22.131,9699,14873
+5,Cal 0.25,Cyfluthrin II,22.131,13396,15552
+6,Cal 0.5,Cyfluthrin II,22.131,17946,20619
+7,Cal 1,Cyfluthrin II,22.131,28442,26186
+8,Cal 5,Cyfluthrin II,22.131,119276,93605
+9,Cal 10,Cyfluthrin II,22.131,226214,181697
+10,Cal 25,Cyfluthrin II,22.131,595708,453271
+11,Cal 5,Cyfluthrin II,22.131,120167,94866
+12,Blanck chemical,Cyfluthrin II,22.131,5819,11700
+13,QC 0,Cyfluthrin II,22.131,6078,10179
+14,QC 0.5,Cyfluthrin II,22.131,8897,13792
+15,QC 1,Cyfluthrin II,22.131,11204,14948
+16,QC 2.5,Cyfluthrin II,22.131,18204,18858
+17,QC 5,Cyfluthrin II,22.131,31661,31473
+18,QC 10,Cyfluthrin II,22.131,50166,45670
+19,Cal 5,Cyfluthrin II,22.131,119160,95851
+20,31110 A,Cyfluthrin II,22.131,7154,9253
+21,31110 Spike,Cyfluthrin II,22.131,30695,26861
+22,31111 A,Cyfluthrin II,22.131,6603,10925
+23,31111 B,Cyfluthrin II,22.131,5400,7385
+24,31120,Cyfluthrin II,22.131,5665,8511
+25,31121,Cyfluthrin II,22.131,5851,8301
+26,31130,Cyfluthrin II,22.131,5451,8450
+27,31131,Cyfluthrin II,22.131,5115,7343
+28,31210,Cyfluthrin II,22.131,5103,10806
+29,31211,Cyfluthrin II,22.131,4664,9598
+30,Cal 5,Cyfluthrin II,22.131,104733,86814
+31,31220,Cyfluthrin II,22.131,6291,9691
+32,31221,Cyfluthrin II,22.131,6416,12848
+33,31230,Cyfluthrin II,22.131,4454,8497
+34,31231,Cyfluthrin II,22.131,5099,11968
+35,31310,Cyfluthrin II,22.131,6557,8623
+36,31311,Cyfluthrin II,22.131,6232,9288
+37,31320,Cyfluthrin II,22.131,4763,8288
+38,31321,Cyfluthrin II,22.131,4986,7403
+39,31330,Cyfluthrin II,22.131,4681,9638
+40,31331,Cyfluthrin II,22.131,6051,7710
+41,Cal 5,Cyfluthrin II,22.131,102363,84401
+42,32110 A,Cyfluthrin II,22.131,4751,6949
+43,32110 B,Cyfluthrin II,22.131,5883,8738
+44,32111 A,Cyfluthrin II,22.131,5587,7699
+45,32111 Spike,Cyfluthrin II,22.131,26337,23107
+46,32120,Cyfluthrin II,22.131,4853,8900
+47,32121,Cyfluthrin II,22.131,5187,23954
+48,32130,Cyfluthrin II,22.131,4199,9441
+49,32131,Cyfluthrin II,22.131,5424,9533
+50,32210,Cyfluthrin II,22.131,4016,9627
+51,32211,Cyfluthrin II,22.131,6222,8354
+52,Cal 5,Cyfluthrin II,22.131,99672,75254
+53,32220,Cyfluthrin II,22.131,5900,7695
+54,32221,Cyfluthrin II,22.131,4496,8086
+55,32230,Cyfluthrin II,22.131,4280,8020
+56,32231,Cyfluthrin II,22.131,4140,22725
+57,32310,Cyfluthrin II,22.131,4768,8750
+58,32311,Cyfluthrin II,22.131,5853,7609
+59,32320,Cyfluthrin II,22.131,5864,7187
+60,32321,Cyfluthrin II,22.131,5131,6468
+61,32330,Cyfluthrin II,22.131,4374,7052
+62,32331,Cyfluthrin II,22.131,4463,8458
+63,Cal 5,Cyfluthrin II,22.131,105725,81260
+64,33110 A,Cyfluthrin II,22.131,4385,10554
+65,33110 Spike,Cyfluthrin II,22.131,23706,19748
+66,33111 A,Cyfluthrin II,22.131,4337,9100
+67,33111 B,Cyfluthrin II,22.131,5653,9989
+68,33120,Cyfluthrin II,22.131,5591,7320
+69,33121,Cyfluthrin II,22.131,6448,11763
+70,33130,Cyfluthrin II,22.131,5981,8836
+71,33131,Cyfluthrin II,22.131,5309,6962
+72,33210,Cyfluthrin II,22.131,4873,8540
+73,33211,Cyfluthrin II,22.131,6641,10854
+74,Cal 5,Cyfluthrin II,22.131,88699,68511
+75,Cal 5 II,Cyfluthrin II,22.131,73476,58427
+76,33220,Cyfluthrin II,22.131,3761,7968
+77,33221,Cyfluthrin II,22.131,4608,8874
+78,33230,Cyfluthrin II,22.131,5104,9498
+79,33231,Cyfluthrin II,22.131,4652,9189
+80,33310,Cyfluthrin II,22.131,4315,9005
+81,33311,Cyfluthrin II,22.131,4400,7680
+82,33320,Cyfluthrin II,22.131,4930,8039
+83,33321,Cyfluthrin II,22.131,4954,8621
+84,33330,Cyfluthrin II,22.131,5147,7832
+85,33331,Cyfluthrin II,22.131,5238,9510
+86,Cal 5 II,Cyfluthrin II,22.131,66212,52578
+87,Blanck chemical II,Cyfluthrin II,22.131,4652,6934
+88,QC 0 II,Cyfluthrin II,22.131,4222,9578
+89,QC 0.5 II,Cyfluthrin II,22.131,5930,8378
+90,QC 1 II,Cyfluthrin II,22.089,6580,9323
+91,QC 2.5 II,Cyfluthrin II,22.09,10855,14693
+92,QC 5 II,Cyfluthrin II,22.131,22863,20589
+93,QC 10 II,Cyfluthrin II,22.131,36375,30812
+94,Cal 5 II,Cyfluthrin II,22.131,68213,55968
+95,21110 A,Cyfluthrin II,22.131,4314,5885
+96,21110 Spike,Cyfluthrin II,22.131,17824,16672
+97,21111 A,Cyfluthrin II,22.131,3284,6159
+98,21111 B,Cyfluthrin II,22.131,4240,5487
+99,21120,Cyfluthrin II,22.131,3774,5497
+100,21121,Cyfluthrin II,22.131,4535,5586
+101,21130,Cyfluthrin II,22.131,5734,6064
+102,21131,Cyfluthrin II,22.131,4934,7024
+103,21210,Cyfluthrin II,22.131,3974,8313
+104,21211,Cyfluthrin II,22.131,4128,5791
+105,Cal 5 II,Cyfluthrin II,22.131,65221,52248
+106,21220,Cyfluthrin II,22.131,3613,7845
+107,21221,Cyfluthrin II,22.131,5914,7862
+108,21230,Cyfluthrin II,22.131,3565,7288
+109,21231,Cyfluthrin II,22.131,3969,6546
+110,21310,Cyfluthrin II,22.131,4243,7034
+111,21311,Cyfluthrin II,22.131,5540,5482
+112,21320,Cyfluthrin II,22.131,3734,6615
+113,21321,Cyfluthrin II,22.131,3134,7130
+114,21330,Cyfluthrin II,22.131,4161,5161
+115,21331,Cyfluthrin II,22.131,3940,6259
+116,Cal 5 II,Cyfluthrin II,22.131,66041,52849
+117,Cal 5 II 1,Cyfluthrin II,22.131,58258,47892
+118,22110 A,Cyfluthrin II,22.131,4612,7050
+119,22110 B,Cyfluthrin II,22.131,3632,7349
+120,22111 A,Cyfluthrin II,22.131,2753,9080
+121,22111 Spike,Cyfluthrin II,22.131,13677,13331
+122,22120,Cyfluthrin II,22.131,5290,5585
+123,22121,Cyfluthrin II,22.131,4870,6609
+124,22130,Cyfluthrin II,22.131,4088,9041
+125,22131,Cyfluthrin II,22.131,4510,6902
+126,22210,Cyfluthrin II,22.131,4114,6272
+127,22211,Cyfluthrin II,22.131,4235,6998
+128,Cal 5 II 1,Cyfluthrin II,22.131,54428,42528
+129,22220,Cyfluthrin II,22.131,4506,5878
+130,22221,Cyfluthrin II,22.131,4832,6299
+131,22230,Cyfluthrin II,22.131,4011,9997
+132,22231,Cyfluthrin II,22.131,3776,7478
+133,22310,Cyfluthrin II,22.131,4418,6912
+134,Cal 5 II 1,Cyfluthrin II,22.131,56428,49368
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Cypermethrin II,22.18,65377,38287
+4,Cal 0.125,Cypermethrin II,22.18,66042,36448
+5,Cal 0.25,Cypermethrin II,22.146,59324,33099
+6,Cal 0.5,Cypermethrin II,22.18,71478,38698
+7,Cal 1,Cypermethrin II,22.176,88987,42093
+8,Cal 5,Cypermethrin II,22.18,228685,89476
+9,Cal 10,Cypermethrin II,22.18,419176,141417
+10,Cal 25,Cypermethrin II,22.18,986177,306816
+11,Cal 5,Cypermethrin II,22.18,246828,88513
+12,Blanck chemical,Cypermethrin II,22.158,34072,33332
+13,QC 0,Cypermethrin II,22.18,47195,33509
+14,QC 0.5,Cypermethrin II,22.158,44548,34006
+15,QC 1,Cypermethrin II,22.197,56460,37579
+16,QC 2.5,Cypermethrin II,22.18,73362,40261
+17,QC 5,Cypermethrin II,22.18,94799,47101
+18,QC 10,Cypermethrin II,22.18,128120,54128
+19,Cal 5,Cypermethrin II,22.18,242264,88493
+20,31110 A,Cypermethrin II,22.18,43641,34080
+21,31110 Spike,Cypermethrin II,22.197,72981,40599
+22,31111 A,Cypermethrin II,22.18,39679,27886
+23,31111 B,Cypermethrin II,22.18,38450,30011
+24,31120,Cypermethrin II,22.18,37462,28700
+25,31121,Cypermethrin II,22.18,29726,26979
+26,31130,Cypermethrin II,22.18,36105,31855
+27,31131,Cypermethrin II,22.18,40750,28797
+28,31210,Cypermethrin II,22.197,36808,31474
+29,31211,Cypermethrin II,22.18,125407,55548
+30,Cal 5,Cypermethrin II,22.18,218650,83456
+31,31220,Cypermethrin II,22.18,50050,33887
+32,31221,Cypermethrin II,22.18,254040,91637
+33,31230,Cypermethrin II,22.18,37956,29918
+34,31231,Cypermethrin II,22.18,220132,84479
+35,31310,Cypermethrin II,22.18,36610,34734
+36,31311,Cypermethrin II,22.176,36951,29562
+37,31320,Cypermethrin II,22.18,34381,32500
+38,31321,Cypermethrin II,22.18,32068,31633
+39,31330,Cypermethrin II,22.18,37168,30980
+40,31331,Cypermethrin II,22.18,36501,35380
+41,Cal 5,Cypermethrin II,22.176,217956,82536
+42,32110 A,Cypermethrin II,22.18,44891,33092
+43,32110 B,Cypermethrin II,22.18,40948,33747
+44,32111 A,Cypermethrin II,22.18,48030,32009
+45,32111 Spike,Cypermethrin II,22.18,83495,41677
+46,32120,Cypermethrin II,22.18,36943,27070
+47,32121,Cypermethrin II,22.176,48653,31735
+48,32130,Cypermethrin II,22.18,34580,28496
+49,32131,Cypermethrin II,22.18,31503,27051
+50,32210,Cypermethrin II,22.18,41486,30816
+51,32211,Cypermethrin II,22.18,67629,38686
+52,Cal 5,Cypermethrin II,22.18,208039,75315
+53,32220,Cypermethrin II,22.197,56041,34757
+54,32221,Cypermethrin II,22.18,134488,57828
+55,32230,Cypermethrin II,22.18,90248,47573
+56,32231,Cypermethrin II,22.18,461079,149874
+57,32310,Cypermethrin II,22.193,41390,30905
+58,32311,Cypermethrin II,22.197,42645,33719
+59,32320,Cypermethrin II,22.18,42681,32387
+60,32321,Cypermethrin II,22.18,35530,27136
+61,32330,Cypermethrin II,22.18,35754,28074
+62,32331,Cypermethrin II,22.18,39596,30758
+63,Cal 5,Cypermethrin II,22.18,207978,80060
+64,33110 A,Cypermethrin II,22.12,33644,27797
+65,33110 Spike,Cypermethrin II,22.146,61027,34905
+66,33111 A,Cypermethrin II,22.18,34528,34895
+67,33111 B,Cypermethrin II,22.18,29448,29625
+68,33120,Cypermethrin II,22.18,29994,27929
+69,33121,Cypermethrin II,22.18,28999,28009
+70,33130,Cypermethrin II,22.176,35912,28080
+71,33131,Cypermethrin II,22.18,31936,25690
+72,33210,Cypermethrin II,22.201,34292,32311
+73,33211,Cypermethrin II,22.18,37265,32447
+74,Cal 5,Cypermethrin II,22.18,203252,70727
+75,Cal 5 II,Cypermethrin II,22.18,165960,62148
+76,33220,Cypermethrin II,22.176,36967,26270
+77,33221,Cypermethrin II,22.18,48226,35395
+78,33230,Cypermethrin II,22.18,33430,34962
+79,33231,Cypermethrin II,22.18,41174,31909
+80,33310,Cypermethrin II,22.18,38252,31505
+81,33311,Cypermethrin II,22.18,127438,56403
+82,33320,Cypermethrin II,22.18,38312,32778
+83,33321,Cypermethrin II,22.176,43128,28788
+84,33330,Cypermethrin II,22.18,32912,25949
+85,33331,Cypermethrin II,22.18,36406,27568
+86,Cal 5 II,Cypermethrin II,22.18,145231,61126
+87,Blanck chemical II,Cypermethrin II,22.12,28989,25486
+88,QC 0 II,Cypermethrin II,22.141,34141,26861
+89,QC 0.5 II,Cypermethrin II,22.124,44912,26858
+90,QC 1 II,Cypermethrin II,22.141,38638,24889
+91,QC 2.5 II,Cypermethrin II,22.184,62287,32056
+92,QC 5 II,Cypermethrin II,22.146,74287,39762
+93,QC 10 II,Cypermethrin II,22.176,101276,43387
+94,Cal 5 II,Cypermethrin II,22.18,151726,58719
+95,21110 A,Cypermethrin II,22.18,31354,25752
+96,21110 Spike,Cypermethrin II,22.176,47981,30041
+97,21111 A,Cypermethrin II,22.18,28556,24493
+98,21111 B,Cypermethrin II,22.18,25264,25395
+99,21120,Cypermethrin II,22.18,27921,24216
+100,21121,Cypermethrin II,22.18,29081,25524
+101,21130,Cypermethrin II,22.18,24397,23705
+102,21131,Cypermethrin II,22.18,25577,24410
+103,21210,Cypermethrin II,22.18,31847,23009
+104,21211,Cypermethrin II,22.18,26140,25821
+105,Cal 5 II,Cypermethrin II,22.18,143965,55057
+106,21220,Cypermethrin II,22.18,35792,28145
+107,21221,Cypermethrin II,22.18,29901,25969
+108,21230,Cypermethrin II,22.18,28288,26327
+109,21231,Cypermethrin II,22.18,27436,23326
+110,21310,Cypermethrin II,22.176,29242,25142
+111,21311,Cypermethrin II,22.18,23575,22856
+112,21320,Cypermethrin II,22.21,20820,20846
+113,21321,Cypermethrin II,22.18,29582,24305
+114,21330,Cypermethrin II,22.18,27361,20845
+115,21331,Cypermethrin II,22.18,27674,23935
+116,Cal 5 II,Cypermethrin II,22.18,138019,53638
+117,Cal 5 II 1,Cypermethrin II,22.18,134211,52522
+118,22110 A,Cypermethrin II,22.18,34089,25957
+119,22110 B,Cypermethrin II,22.18,30031,23023
+120,22111 A,Cypermethrin II,22.18,27254,25108
+121,22111 Spike,Cypermethrin II,22.176,36230,20037
+122,22120,Cypermethrin II,22.18,25525,20481
+123,22121,Cypermethrin II,22.18,31264,25340
+124,22130,Cypermethrin II,22.18,30487,21961
+125,22131,Cypermethrin II,22.18,34750,25582
+126,22210,Cypermethrin II,22.18,32100,26006
+127,22211,Cypermethrin II,22.176,31412,23544
+128,Cal 5 II 1,Cypermethrin II,22.184,120353,53195
+129,22220,Cypermethrin II,22.18,35941,25084
+130,22221,Cypermethrin II,22.188,29440,25879
+131,22230,Cypermethrin II,22.171,52283,27475
+132,22231,Cypermethrin II,22.18,38229,25033
+133,22310,Cypermethrin II,22.18,34049,27453
+134,Cal 5 II 1,Cypermethrin II,22.184,125416,49385
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Cyfluthrin III,22.247,818,1180
+4,Cal 0.125,Cyfluthrin III,22.243,1396,993
+5,Cal 0.25,Cyfluthrin III,22.243,2322,1845
+6,Cal 0.5,Cyfluthrin III,22.251,2355,1775
+7,Cal 1,Cyfluthrin III,22.243,5374,4311
+8,Cal 5,Cyfluthrin III,22.247,27666,18118
+9,Cal 10,Cyfluthrin III,22.243,51496,37394
+10,Cal 25,Cyfluthrin III,22.243,144200,117332
+11,Cal 5,Cyfluthrin III,22.247,28025,16551
+12,Blanck chemical,Cyfluthrin III,22.26,450,436
+13,QC 0,Cyfluthrin III,22.255,656,2072
+14,QC 0.5,Cyfluthrin III,22.239,1246,1094
+15,QC 1,Cyfluthrin III,22.251,2031,2006
+16,QC 2.5,Cyfluthrin III,22.247,3195,2373
+17,QC 5,Cyfluthrin III,22.239,6758,4248
+18,QC 10,Cyfluthrin III,22.243,11496,7359
+19,Cal 5,Cyfluthrin III,22.243,28004,19831
+20,31110 A,Cyfluthrin III,22.239,936,750
+21,31110 Spike,Cyfluthrin III,22.243,6482,4072
+22,31111 A,Cyfluthrin III,22.277,1077,2857
+23,31111 B,Cyfluthrin III,22.234,701,872
+24,31120,Cyfluthrin III,22.247,235,636
+25,31121,Cyfluthrin III,22.243,412,636
+26,31130,Cyfluthrin III,22.239,1413,1024
+27,31131,Cyfluthrin III,22.239,1091,1186
+28,31210,Cyfluthrin III,22.255,946,889
+29,31211,Cyfluthrin III,22.285,81,1377
+30,Cal 5,Cyfluthrin III,22.239,25007,23037
+31,31220,Cyfluthrin III,22.255,327,3796
+32,31221,Cyfluthrin III,22.264,49,
+33,31230,Cyfluthrin III,22.31,1324,364
+34,31231,Cyfluthrin III,22.239,40,
+35,31310,Cyfluthrin III,22.161,487,644
+36,31311,Cyfluthrin III,,,
+37,31320,Cyfluthrin III,22.153,699,754
+38,31321,Cyfluthrin III,22.327,691,477
+39,31330,Cyfluthrin III,,,
+40,31331,Cyfluthrin III,,,
+41,Cal 5,Cyfluthrin III,22.239,26609,16987
+42,32110 A,Cyfluthrin III,22.217,220,
+43,32110 B,Cyfluthrin III,22.157,1055,1337
+44,32111 A,Cyfluthrin III,22.239,38,
+45,32111 Spike,Cyfluthrin III,22.243,5054,4555
+46,32120,Cyfluthrin III,22.26,1249,3132
+47,32121,Cyfluthrin III,22.213,60,
+48,32130,Cyfluthrin III,,,
+49,32131,Cyfluthrin III,22.157,618,997
+50,32210,Cyfluthrin III,22.165,643,700
+51,32211,Cyfluthrin III,22.208,188,
+52,Cal 5,Cyfluthrin III,22.239,22250,17378
+53,32220,Cyfluthrin III,22.306,644,
+54,32221,Cyfluthrin III,22.277,1556,453
+55,32230,Cyfluthrin III,,,
+56,32231,Cyfluthrin III,22.161,914,4945
+57,32310,Cyfluthrin III,22.302,4905,2867
+58,32311,Cyfluthrin III,22.323,1365,
+59,32320,Cyfluthrin III,22.243,122,437
+60,32321,Cyfluthrin III,22.157,648,1205
+61,32330,Cyfluthrin III,22.306,352,70
+62,32331,Cyfluthrin III,22.157,388,516
+63,Cal 5,Cyfluthrin III,22.234,24742,17415
+64,33110 A,Cyfluthrin III,22.2,185,698
+65,33110 Spike,Cyfluthrin III,22.239,5029,2727
+66,33111 A,Cyfluthrin III,,,
+67,33111 B,Cyfluthrin III,22.161,535,
+68,33120,Cyfluthrin III,22.161,620,1082
+69,33121,Cyfluthrin III,,,
+70,33130,Cyfluthrin III,22.157,658,1189
+71,33131,Cyfluthrin III,22.251,151,
+72,33210,Cyfluthrin III,22.285,764,1289
+73,33211,Cyfluthrin III,22.319,1132,
+74,Cal 5,Cyfluthrin III,22.234,23138,16871
+75,Cal 5 II,Cyfluthrin III,22.234,19226,12481
+76,33220,Cyfluthrin III,22.327,656,374
+77,33221,Cyfluthrin III,22.161,873,208
+78,33230,Cyfluthrin III,22.234,3649,91
+79,33231,Cyfluthrin III,,,
+80,33310,Cyfluthrin III,,,
+81,33311,Cyfluthrin III,22.26,918,1531
+82,33320,Cyfluthrin III,22.302,90,
+83,33321,Cyfluthrin III,,,
+84,33330,Cyfluthrin III,22.234,191,
+85,33331,Cyfluthrin III,22.161,459,1298
+86,Cal 5 II,Cyfluthrin III,22.23,15631,10458
+87,Blanck chemical II,Cyfluthrin III,,,
+88,QC 0 II,Cyfluthrin III,,,
+89,QC 0.5 II,Cyfluthrin III,22.217,1163,1451
+90,QC 1 II,Cyfluthrin III,22.234,1127,1251
+91,QC 2.5 II,Cyfluthrin III,22.23,2396,2436
+92,QC 5 II,Cyfluthrin III,22.234,3191,2672
+93,QC 10 II,Cyfluthrin III,22.234,7308,5069
+94,Cal 5 II,Cyfluthrin III,22.23,15959,13149
+95,21110 A,Cyfluthrin III,22.234,893,572
+96,21110 Spike,Cyfluthrin III,22.23,3267,1967
+97,21111 A,Cyfluthrin III,22.31,78,
+98,21111 B,Cyfluthrin III,22.222,165,190
+99,21120,Cyfluthrin III,22.327,265,
+100,21121,Cyfluthrin III,22.183,195,281
+101,21130,Cyfluthrin III,22.319,965,
+102,21131,Cyfluthrin III,,,
+103,21210,Cyfluthrin III,,,
+104,21211,Cyfluthrin III,22.157,648,
+105,Cal 5 II,Cyfluthrin III,22.23,15652,10697
+106,21220,Cyfluthrin III,22.285,730,53
+107,21221,Cyfluthrin III,,,
+108,21230,Cyfluthrin III,22.251,298,
+109,21231,Cyfluthrin III,22.327,87,1237
+110,21310,Cyfluthrin III,22.247,45,
+111,21311,Cyfluthrin III,22.327,574,
+112,21320,Cyfluthrin III,,,
+113,21321,Cyfluthrin III,22.213,99,
+114,21330,Cyfluthrin III,22.217,54,195
+115,21331,Cyfluthrin III,22.285,103,
+116,Cal 5 II,Cyfluthrin III,22.234,14402,10550
+117,Cal 5 II 1,Cyfluthrin III,22.234,13707,9739
+118,22110 A,Cyfluthrin III,22.157,587,852
+119,22110 B,Cyfluthrin III,22.208,274,
+120,22111 A,Cyfluthrin III,22.302,1308,
+121,22111 Spike,Cyfluthrin III,22.23,1643,1890
+122,22120,Cyfluthrin III,22.277,91,466
+123,22121,Cyfluthrin III,22.289,208,1220
+124,22130,Cyfluthrin III,,,
+125,22131,Cyfluthrin III,22.302,882,
+126,22210,Cyfluthrin III,22.165,601,896
+127,22211,Cyfluthrin III,,,
+128,Cal 5 II 1,Cyfluthrin III,22.226,12317,9329
+129,22220,Cyfluthrin III,22.161,479,729
+130,22221,Cyfluthrin III,22.165,818,1709
+131,22230,Cyfluthrin III,22.157,1060,
+132,22231,Cyfluthrin III,22.23,82,
+133,22310,Cyfluthrin III,,,
+134,Cal 5 II 1,Cyfluthrin III,22.23,13193,9706
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Cypermethrin III,22.324,3361,1459
+4,Cal 0.125,Cypermethrin III,22.286,4416,2569
+5,Cal 0.25,Cypermethrin III,22.291,3292,2528
+6,Cal 0.5,Cypermethrin III,22.282,6205,2083
+7,Cal 1,Cypermethrin III,22.286,5725,4817
+8,Cal 5,Cypermethrin III,22.291,38124,10387
+9,Cal 10,Cypermethrin III,22.295,74824,23913
+10,Cal 25,Cypermethrin III,22.295,197845,57513
+11,Cal 5,Cypermethrin III,22.295,38244,10905
+12,Blanck chemical,Cypermethrin III,22.308,1976,2398
+13,QC 0,Cypermethrin III,22.303,2813,1630
+14,QC 0.5,Cypermethrin III,22.291,3883,1167
+15,QC 1,Cypermethrin III,22.286,3998,2024
+16,QC 2.5,Cypermethrin III,22.291,8319,3713
+17,QC 5,Cypermethrin III,22.291,14791,6766
+18,QC 10,Cypermethrin III,22.295,16951,7305
+19,Cal 5,Cypermethrin III,22.291,37182,10496
+20,31110 A,Cypermethrin III,,,
+21,31110 Spike,Cypermethrin III,22.291,6110,3448
+22,31111 A,Cypermethrin III,,,
+23,31111 B,Cypermethrin III,,,
+24,31120,Cypermethrin III,,,
+25,31121,Cypermethrin III,,,
+26,31130,Cypermethrin III,22.223,729,
+27,31131,Cypermethrin III,,,
+28,31210,Cypermethrin III,22.324,2763,3017
+29,31211,Cypermethrin III,22.286,9557,4772
+30,Cal 5,Cypermethrin III,22.291,34355,9840
+31,31220,Cypermethrin III,,,
+32,31221,Cypermethrin III,22.291,28942,9354
+33,31230,Cypermethrin III,,,
+34,31231,Cypermethrin III,22.291,22393,8028
+35,31310,Cypermethrin III,,,
+36,31311,Cypermethrin III,,,
+37,31320,Cypermethrin III,,,
+38,31321,Cypermethrin III,,,
+39,31330,Cypermethrin III,,,
+40,31331,Cypermethrin III,22.331,463,
+41,Cal 5,Cypermethrin III,22.286,40053,11998
+42,32110 A,Cypermethrin III,,,
+43,32110 B,Cypermethrin III,,,
+44,32111 A,Cypermethrin III,22.324,4395,2387
+45,32111 Spike,Cypermethrin III,22.291,7840,3897
+46,32120,Cypermethrin III,22.265,1047,444
+47,32121,Cypermethrin III,,,
+48,32130,Cypermethrin III,,,
+49,32131,Cypermethrin III,22.299,1093,
+50,32210,Cypermethrin III,22.308,2392,768
+51,32211,Cypermethrin III,22.291,5314,
+52,Cal 5,Cypermethrin III,22.291,33908,8754
+53,32220,Cypermethrin III,22.286,5613,1728
+54,32221,Cypermethrin III,22.286,14912,5144
+55,32230,Cypermethrin III,22.286,8860,2942
+56,32231,Cypermethrin III,22.286,74119,21158
+57,32310,Cypermethrin III,22.324,3229,2151
+58,32311,Cypermethrin III,22.282,1175,2396
+59,32320,Cypermethrin III,,,
+60,32321,Cypermethrin III,22.339,2130,
+61,32330,Cypermethrin III,,,
+62,32331,Cypermethrin III,,,
+63,Cal 5,Cypermethrin III,22.286,39891,9583
+64,33110 A,Cypermethrin III,22.316,3466,2378
+65,33110 Spike,Cypermethrin III,22.286,6115,2713
+66,33111 A,Cypermethrin III,,,
+67,33111 B,Cypermethrin III,,,
+68,33120,Cypermethrin III,,,
+69,33121,Cypermethrin III,22.24,442,
+70,33130,Cypermethrin III,22.312,316,
+71,33131,Cypermethrin III,,,
+72,33210,Cypermethrin III,22.303,2180,1054
+73,33211,Cypermethrin III,,,
+74,Cal 5,Cypermethrin III,22.282,27914,7757
+75,Cal 5 II,Cypermethrin III,22.282,25148,7767
+76,33220,Cypermethrin III,,,
+77,33221,Cypermethrin III,,,
+78,33230,Cypermethrin III,,,
+79,33231,Cypermethrin III,,,
+80,33310,Cypermethrin III,22.278,884,858
+81,33311,Cypermethrin III,22.282,5472,1778
+82,33320,Cypermethrin III,,,
+83,33321,Cypermethrin III,,,
+84,33330,Cypermethrin III,,,
+85,33331,Cypermethrin III,22.352,467,2213
+86,Cal 5 II,Cypermethrin III,22.282,25692,9326
+87,Blanck chemical II,Cypermethrin III,22.295,1755,629
+88,QC 0 II,Cypermethrin III,22.32,2357,1357
+89,QC 0.5 II,Cypermethrin III,22.286,2478,611
+90,QC 1 II,Cypermethrin III,22.299,2940,1846
+91,QC 2.5 II,Cypermethrin III,22.282,5558,2106
+92,QC 5 II,Cypermethrin III,22.286,7994,3060
+93,QC 10 II,Cypermethrin III,22.282,12386,2194
+94,Cal 5 II,Cypermethrin III,22.282,23999,7345
+95,21110 A,Cypermethrin III,,,
+96,21110 Spike,Cypermethrin III,22.286,5166,2491
+97,21111 A,Cypermethrin III,,,
+98,21111 B,Cypermethrin III,,,
+99,21120,Cypermethrin III,,,
+100,21121,Cypermethrin III,,,
+101,21130,Cypermethrin III,,,
+102,21131,Cypermethrin III,22.253,648,
+103,21210,Cypermethrin III,,,
+104,21211,Cypermethrin III,,,
+105,Cal 5 II,Cypermethrin III,22.278,25020,6449
+106,21220,Cypermethrin III,22.36,440,
+107,21221,Cypermethrin III,22.324,909,1818
+108,21230,Cypermethrin III,22.244,656,1323
+109,21231,Cypermethrin III,,,
+110,21310,Cypermethrin III,,,
+111,21311,Cypermethrin III,,,
+112,21320,Cypermethrin III,,,
+113,21321,Cypermethrin III,,,
+114,21330,Cypermethrin III,22.312,391,
+115,21331,Cypermethrin III,,,
+116,Cal 5 II,Cypermethrin III,22.282,24455,6027
+117,Cal 5 II 1,Cypermethrin III,22.282,20181,5600
+118,22110 A,Cypermethrin III,,,
+119,22110 B,Cypermethrin III,,,
+120,22111 A,Cypermethrin III,,,
+121,22111 Spike,Cypermethrin III,22.278,3486,1132
+122,22120,Cypermethrin III,22.227,449,648
+123,22121,Cypermethrin III,22.344,1546,
+124,22130,Cypermethrin III,,,
+125,22131,Cypermethrin III,22.24,743,1399
+126,22210,Cypermethrin III,22.386,412,
+127,22211,Cypermethrin III,22.344,5557,
+128,Cal 5 II 1,Cypermethrin III,22.278,17533,6575
+129,22220,Cypermethrin III,,,
+130,22221,Cypermethrin III,22.299,1216,1090
+131,22230,Cypermethrin III,22.348,3747,
+132,22231,Cypermethrin III,,,
+133,22310,Cypermethrin III,22.352,1405,262
+134,Cal 5 II 1,Cypermethrin III,22.282,21602,4593
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Deltamethrin I,23.056,671,45
+4,Cal 0.125,Deltamethrin I,23.069,626,285
+5,Cal 0.25,Deltamethrin I,23.069,1025,467
+6,Cal 0.5,Deltamethrin I,23.064,1718,725
+7,Cal 1,Deltamethrin I,23.068,2777,1199
+8,Cal 5,Deltamethrin I,23.069,13844,7646
+9,Cal 10,Deltamethrin I,23.068,27703,15139
+10,Cal 25,Deltamethrin I,23.069,71155,38659
+11,Cal 5,Deltamethrin I,23.069,13844,7708
+12,Blanck chemical,Deltamethrin I,23.048,152,13
+13,QC 0,Deltamethrin I,23.098,171,21
+14,QC 0.5,Deltamethrin I,23.073,506,221
+15,QC 1,Deltamethrin I,23.073,948,392
+16,QC 2.5,Deltamethrin I,23.069,2088,1034
+17,QC 5,Deltamethrin I,23.065,4222,1995
+18,QC 10,Deltamethrin I,23.068,7667,4154
+19,Cal 5,Deltamethrin I,23.069,15209,8100
+20,31110 A,Deltamethrin I,23.188,0,0
+21,31110 Spike,Deltamethrin I,23.064,3194,1495
+22,31111 A,Deltamethrin I,23.155,0,
+23,31111 B,Deltamethrin I,23.163,0,0
+24,31120,Deltamethrin I,23.197,0,0
+25,31121,Deltamethrin I,23.121,0,
+26,31130,Deltamethrin I,23.117,0,0
+27,31131,Deltamethrin I,23.145,0,0
+28,31210,Deltamethrin I,23.117,0,90
+29,31211,Deltamethrin I,23.116,0,
+30,Cal 5,Deltamethrin I,23.065,13494,7130
+31,31220,Deltamethrin I,23.209,0,0
+32,31221,Deltamethrin I,23.154,0,0
+33,31230,Deltamethrin I,23.121,0,0
+34,31231,Deltamethrin I,23.18,0,0
+35,31310,Deltamethrin I,23.082,0,
+36,31311,Deltamethrin I,23.12,0,
+37,31320,Deltamethrin I,23.125,653,54
+38,31321,Deltamethrin I,23.116,0,0
+39,31330,Deltamethrin I,23.172,0,
+40,31331,Deltamethrin I,23.134,0,
+41,Cal 5,Deltamethrin I,23.064,14152,7798
+42,32110 A,Deltamethrin I,23.117,0,0
+43,32110 B,Deltamethrin I,23.121,0,0
+44,32111 A,Deltamethrin I,23.061,422,70
+45,32111 Spike,Deltamethrin I,23.064,3039,1740
+46,32120,Deltamethrin I,23.134,0,0
+47,32121,Deltamethrin I,23.12,0,
+48,32130,Deltamethrin I,23.142,0,
+49,32131,Deltamethrin I,23.134,0,0
+50,32210,Deltamethrin I,23.138,0,0
+51,32211,Deltamethrin I,23.04,0,
+52,Cal 5,Deltamethrin I,23.061,13935,7708
+53,32220,Deltamethrin I,23.179,0,0
+54,32221,Deltamethrin I,23.117,0,0
+55,32230,Deltamethrin I,23.184,0,136
+56,32231,Deltamethrin I,23.192,0,0
+57,32310,Deltamethrin I,23.137,0,
+58,32311,Deltamethrin I,23.172,0,
+59,32320,Deltamethrin I,23.116,0,
+60,32321,Deltamethrin I,23.205,0,0
+61,32330,Deltamethrin I,23.179,0,0
+62,32331,Deltamethrin I,23.145,0,46
+63,Cal 5,Deltamethrin I,23.06,14436,7999
+64,33110 A,Deltamethrin I,23.158,0,0
+65,33110 Spike,Deltamethrin I,23.06,2724,1629
+66,33111 A,Deltamethrin I,23.13,0,0
+67,33111 B,Deltamethrin I,23.125,832,103
+68,33120,Deltamethrin I,23.163,0,0
+69,33121,Deltamethrin I,23.205,0,0
+70,33130,Deltamethrin I,23.204,0,0
+71,33131,Deltamethrin I,23.154,0,16
+72,33210,Deltamethrin I,23.125,0,0
+73,33211,Deltamethrin I,23.18,0,0
+74,Cal 5,Deltamethrin I,23.056,15912,8695
+75,Cal 5 II,Deltamethrin I,23.056,8055,4342
+76,33220,Deltamethrin I,23.15,0,0
+77,33221,Deltamethrin I,23.134,0,0
+78,33230,Deltamethrin I,23.155,0,0
+79,33231,Deltamethrin I,23.134,0,0
+80,33310,Deltamethrin I,23.184,0,89
+81,33311,Deltamethrin I,23.048,0,
+82,33320,Deltamethrin I,23.197,0,0
+83,33321,Deltamethrin I,23.12,0,0
+84,33330,Deltamethrin I,23.179,0,
+85,33331,Deltamethrin I,23.129,0,0
+86,Cal 5 II,Deltamethrin I,23.056,7658,4193
+87,Blanck chemical II,Deltamethrin I,23.018,203,77
+88,QC 0 II,Deltamethrin I,23.12,0,0
+89,QC 0.5 II,Deltamethrin I,23.047,313,129
+90,QC 1 II,Deltamethrin I,23.056,619,203
+91,QC 2.5 II,Deltamethrin I,23.056,1187,507
+92,QC 5 II,Deltamethrin I,23.056,2400,1194
+93,QC 10 II,Deltamethrin I,23.056,3715,1926
+94,Cal 5 II,Deltamethrin I,23.056,7784,4011
+95,21110 A,Deltamethrin I,23.141,0,0
+96,21110 Spike,Deltamethrin I,23.056,2007,1118
+97,21111 A,Deltamethrin I,23.134,0,0
+98,21111 B,Deltamethrin I,23.187,0,0
+99,21120,Deltamethrin I,23.18,0,0
+100,21121,Deltamethrin I,23.12,0,0
+101,21130,Deltamethrin I,23.125,0,0
+102,21131,Deltamethrin I,23.12,0,
+103,21210,Deltamethrin I,23.179,0,0
+104,21211,Deltamethrin I,23.134,0,
+105,Cal 5 II,Deltamethrin I,23.056,8482,4056
+106,21220,Deltamethrin I,23.052,0,0
+107,21221,Deltamethrin I,23.13,0,56
+108,21230,Deltamethrin I,23.142,0,76
+109,21231,Deltamethrin I,23.137,0,0
+110,21310,Deltamethrin I,23.162,0,0
+111,21311,Deltamethrin I,23.129,0,0
+112,21320,Deltamethrin I,23.125,0,0
+113,21321,Deltamethrin I,23.176,0,0
+114,21330,Deltamethrin I,23.184,0,0
+115,21331,Deltamethrin I,23.142,0,0
+116,Cal 5 II,Deltamethrin I,23.051,8445,4578
+117,Cal 5 II 1,Deltamethrin I,23.056,7820,4118
+118,22110 A,Deltamethrin I,23.116,0,0
+119,22110 B,Deltamethrin I,23.117,0,
+120,22111 A,Deltamethrin I,23.183,0,0
+121,22111 Spike,Deltamethrin I,23.048,455,232
+122,22120,Deltamethrin I,23.175,0,
+123,22121,Deltamethrin I,23.192,0,0
+124,22130,Deltamethrin I,23.151,0,
+125,22131,Deltamethrin I,23.117,0,0
+126,22210,Deltamethrin I,22.939,0,0
+127,22211,Deltamethrin I,23.192,0,0
+128,Cal 5 II 1,Deltamethrin I,23.056,7040,3959
+129,22220,Deltamethrin I,23.117,0,0
+130,22221,Deltamethrin I,23.069,0,0
+131,22230,Deltamethrin I,23.137,0,0
+132,22231,Deltamethrin I,23.141,0,0
+133,22310,Deltamethrin I,23.125,0,0
+134,Cal 5 II 1,Deltamethrin I,23.052,7978,4167
+,,,,,
+Teller,Monsters,Name,RT,Quant Area,Qual Area
+3,Cal 0,Deltamethrin II,23.289,342,51
+4,Cal 0.125,Deltamethrin II,23.314,1566,564
+5,Cal 0.25,Deltamethrin II,23.306,2371,888
+6,Cal 0.5,Deltamethrin II,23.31,3728,1970
+7,Cal 1,Deltamethrin II,23.314,7740,4402
+8,Cal 5,Deltamethrin II,23.314,42871,23846
+9,Cal 10,Deltamethrin II,23.31,91640,49909
+10,Cal 25,Deltamethrin II,23.31,217348,118716
+11,Cal 5,Deltamethrin II,23.314,44608,25044
+12,Blanck chemical,Deltamethrin II,23.318,219,48
+13,QC 0,Deltamethrin II,23.326,199,74
+14,QC 0.5,Deltamethrin II,23.322,656,301
+15,QC 1,Deltamethrin II,23.31,1493,772
+16,QC 2.5,Deltamethrin II,23.31,3877,2411
+17,QC 5,Deltamethrin II,23.31,7731,4845
+18,QC 10,Deltamethrin II,23.306,14230,8125
+19,Cal 5,Deltamethrin II,23.31,41910,24225
+20,31110 A,Deltamethrin II,23.188,0,0
+21,31110 Spike,Deltamethrin II,23.31,6370,3889
+22,31111 A,Deltamethrin II,23.264,0,14
+23,31111 B,Deltamethrin II,23.31,0,
+24,31120,Deltamethrin II,23.272,0,0
+25,31121,Deltamethrin II,23.326,0,0
+26,31130,Deltamethrin II,23.276,0,0
+27,31131,Deltamethrin II,23.263,0,
+28,31210,Deltamethrin II,23.247,0,
+29,31211,Deltamethrin II,23.271,0,19
+30,Cal 5,Deltamethrin II,23.306,33992,18767
+31,31220,Deltamethrin II,23.209,0,0
+32,31221,Deltamethrin II,23.263,0,0
+33,31230,Deltamethrin II,23.268,0,0
+34,31231,Deltamethrin II,23.218,0,0
+35,31310,Deltamethrin II,23.26,0,0
+36,31311,Deltamethrin II,23.2,0,0
+37,31320,Deltamethrin II,23.263,1431,36
+38,31321,Deltamethrin II,23.208,0,0
+39,31330,Deltamethrin II,23.255,0,0
+40,31331,Deltamethrin II,23.192,0,0
+41,Cal 5,Deltamethrin II,23.302,30564,17253
+42,32110 A,Deltamethrin II,23.306,0,0
+43,32110 B,Deltamethrin II,23.255,0,
+44,32111 A,Deltamethrin II,23.255,0,0
+45,32111 Spike,Deltamethrin II,23.302,6639,3943
+46,32120,Deltamethrin II,23.234,0,0
+47,32121,Deltamethrin II,23.275,0,0
+48,32130,Deltamethrin II,23.213,0,0
+49,32131,Deltamethrin II,23.218,0,0
+50,32210,Deltamethrin II,23.167,0,0
+51,32211,Deltamethrin II,23.268,0,0
+52,Cal 5,Deltamethrin II,23.306,30557,15808
+53,32220,Deltamethrin II,23.25,0,0
+54,32221,Deltamethrin II,23.255,0,0
+55,32230,Deltamethrin II,23.251,0,0
+56,32231,Deltamethrin II,23.213,0,0
+57,32310,Deltamethrin II,23.213,0,
+58,32311,Deltamethrin II,23.222,0,0
+59,32320,Deltamethrin II,23.275,0,
+60,32321,Deltamethrin II,23.205,0,0
+61,32330,Deltamethrin II,23.246,0,0
+62,32331,Deltamethrin II,23.25,0,49
+63,Cal 5,Deltamethrin II,23.302,31094,16702
+64,33110 A,Deltamethrin II,23.275,0,0
+65,33110 Spike,Deltamethrin II,23.302,4779,2613
+66,33111 A,Deltamethrin II,23.301,0,0
+67,33111 B,Deltamethrin II,23.271,0,0
+68,33120,Deltamethrin II,23.218,0,0
+69,33121,Deltamethrin II,23.205,0,0
+70,33130,Deltamethrin II,23.275,0,0
+71,33131,Deltamethrin II,23.221,0,26
+72,33210,Deltamethrin II,23.25,2499,243
+73,33211,Deltamethrin II,23.209,0,0
+74,Cal 5,Deltamethrin II,23.297,26861,14408
+75,Cal 5 II,Deltamethrin II,23.297,24216,12762
+76,33220,Deltamethrin II,23.275,0,0
+77,33221,Deltamethrin II,23.192,0,0
+78,33230,Deltamethrin II,23.167,0,0
+79,33231,Deltamethrin II,23.197,0,
+80,33310,Deltamethrin II,23.251,0,0
+81,33311,Deltamethrin II,23.167,0,
+82,33320,Deltamethrin II,23.197,0,0
+83,33321,Deltamethrin II,23.271,0,0
+84,33330,Deltamethrin II,23.267,0,
+85,33331,Deltamethrin II,23.263,0,0
+86,Cal 5 II,Deltamethrin II,23.297,19549,10937
+87,Blanck chemical II,Deltamethrin II,23.289,102,11
+88,QC 0 II,Deltamethrin II,23.271,0,0
+89,QC 0.5 II,Deltamethrin II,23.302,434,145
+90,QC 1 II,Deltamethrin II,23.272,975,460
+91,QC 2.5 II,Deltamethrin II,23.297,3922,1614
+92,QC 5 II,Deltamethrin II,23.297,6716,3511
+93,QC 10 II,Deltamethrin II,23.297,10433,5346
+94,Cal 5 II,Deltamethrin II,23.293,21572,10988
+95,21110 A,Deltamethrin II,23.271,0,0
+96,21110 Spike,Deltamethrin II,23.293,2945,1529
+97,21111 A,Deltamethrin II,23.213,0,0
+98,21111 B,Deltamethrin II,23.221,0,0
+99,21120,Deltamethrin II,23.251,0,0
+100,21121,Deltamethrin II,23.25,0,
+101,21130,Deltamethrin II,23.247,0,0
+102,21131,Deltamethrin II,23.213,0,0
+103,21210,Deltamethrin II,23.179,0,0
+104,21211,Deltamethrin II,23.255,0,0
+105,Cal 5 II,Deltamethrin II,23.297,19835,10777
+106,21220,Deltamethrin II,23.264,0,0
+107,21221,Deltamethrin II,23.272,0,0
+108,21230,Deltamethrin II,23.243,0,0
+109,21231,Deltamethrin II,23.263,0,0
+110,21310,Deltamethrin II,23.229,0,0
+111,21311,Deltamethrin II,23.225,0,0
+112,21320,Deltamethrin II,23.251,0,0
+113,21321,Deltamethrin II,23.205,0,102
+114,21330,Deltamethrin II,23.276,0,0
+115,21331,Deltamethrin II,23.222,0,0
+116,Cal 5 II,Deltamethrin II,23.293,19777,10662
+117,Cal 5 II 1,Deltamethrin II,23.293,18751,9308
+118,22110 A,Deltamethrin II,23.259,0,0
+119,22110 B,Deltamethrin II,23.222,0,0
+120,22111 A,Deltamethrin II,23.233,0,0
+121,22111 Spike,Deltamethrin II,23.276,2202,1139
+122,22120,Deltamethrin II,23.233,0,0
+123,22121,Deltamethrin II,23.192,0,0
+124,22130,Deltamethrin II,23.239,0,0
+125,22131,Deltamethrin II,23.255,0,0
+126,22210,Deltamethrin II,23.271,0,0
+127,22211,Deltamethrin II,23.233,0,
+128,Cal 5 II 1,Deltamethrin II,23.293,16324,9055
+129,22220,Deltamethrin II,23.243,0,26
+130,22221,Deltamethrin II,23.251,0,0
+131,22230,Deltamethrin II,23.259,0,0
+132,22231,Deltamethrin II,23.229,0,0
+133,22310,Deltamethrin II,23.234,0,38
+134,Cal 5 II 1,Deltamethrin II,23.293,17755,9341
