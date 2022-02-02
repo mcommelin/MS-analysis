@@ -1,8 +1,11 @@
+# load raw data form MS and GC machines and store is tidy table
 # Initialization -----------------
 
 library(tidyverse)
-library(lubridate)
 
+# Read header of colum names
+# compile coumpound list
+# make loop to load data for each compound
 # Pesticide data ----------------------------------------------------------
 
 ## GLY & AMPA ----------------
