@@ -3,16 +3,50 @@
 
 library(tidyverse)
 
-# Read header of colum names
-# compile coumpound list
 # make loop to load data for each compound
+
+# test datasets:
+data_files <- dir("data_LC/", pattern = ".*txt$", full.names = T)
+df_data <- vector("list", length = length(data_files))
+
+for( i in seq_along(data_files)) {
+# compile coumpound list
+compounds <- read_delim(data_files[i], delim = "\t", col_names = F) %>%
+  filter(str_detect(X1, "Compound \\d")) %>%
+  mutate(X1 = str_replace_all(X1, "[ -]", "_"))
+compounds <- str_replace_all(compounds$X1, "Compound_\\d+:__|,", "")
+compounds
+
+# Read header of column names
+header <- readLines(data_files[i]) %>%
+  str_detect("Name")
+skip <- which(header == TRUE)[1] - 1
+
+# Prepare and load the data into Area_DF
+data <- read.delim(data_files[i], skip = skip) %>%
+  mutate(X = as.numeric(X),
+         compound = "na") %>%
+  filter(!is.na(X)) %>%
+  rename(number = X)
+nms1 <- str_replace(names(data), "^.*Area.*$", "Area")
+names(data) <- nms1[nms1=="Area"]=str_c("Area", c(1:n_area))
+
+# write compound name as variable in data
+n_samp <- max(data$number)
+for (j in seq_along(compounds)) {
+data$compound[((j-1)*n_samp+1):(j*n_samp)]= compounds[j]
+}
+
+df_data[[i]] <- data
+}
+
 # Pesticide data ----------------------------------------------------------
 
 ## GLY & AMPA ----------------
 # load or make compound list
 compounds_gly <- c("GLY_qn", "GLY_ql", "GLY_IS", "AMPA_qn", "AMPA_ql", "AMPA_IS")
 # load different analysis rounds and save to one file
-batch <- dir("input/", pattern = "^GLY.*txt$", full.names = T)
+
 batch_list <- vector("list", length = length(batch))
 nm_file <- dir("input/", pattern = "^names_GLY.*", full.names = T)
 for (j in seq_along(batch)) {
