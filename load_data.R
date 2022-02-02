@@ -5,7 +5,8 @@ library(tidyverse)
 
 # make loop to load data for each compound
 # dir <- "data_LC"
-
+dir <-  "data_LC"
+delim <- "\t"
 load_raw_data <- function(dir, delim) {
 
 # test datasets:
@@ -47,6 +48,27 @@ df_data[[i]] <- data
 
 return(df_data)
 }
+
+load_raw_data("data_LC", "\t")
+
+# organize data
+
+# add batch name
+# add analysis type
+data <- df_data[[i]] %>%
+  mutate(batch = str_remove(data_files[i], "\\..*$"),
+         batch = str_remove(batch, str_c("^", dir, "/")),
+         an_type = if_else(str_detect(Sample.Text, "[Bb]lank|blk"), "blank", "sample"),
+         an_type = if_else(str_detect(Sample.Text, "[Cc]al"), "curve", an_type),
+         an_type = if_else(str_detect(Sample.Text, "[Ss]ta|[Ss]td"), "standard", an_type),
+         an_type = if_else(str_detect(Sample.Text, "QC|XY"), "QC", an_type),
+         matrix_type = str_extract(Sample.Text, "_._"),
+         matrix_type = str_extract(matrix_type, "[^_]"))
+# add matrix type
+matrix_types <- tibble(name = c("Water", "Sediment", "Soil"),
+                       id = c("W", "S", "C"))
+
+
 # Pesticide data ----------------------------------------------------------
 
 ## GLY & AMPA ----------------
