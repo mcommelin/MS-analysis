@@ -6,6 +6,7 @@ library(tidyverse)
 # make loop to load data for each compound
 dir <-  "data_LC"
 delim <- "\t"
+
 load_raw_data <- function(dir, delim) {
 
 # test datasets:
@@ -56,7 +57,7 @@ data <- data %>%
          matrix_type = str_extract(matrix_type, "[^_]"))
 df_data[[i]] <- data
 }
-#return(df_data)
+return(df_data)
 }
 
 #load_raw_data("data_LC", "\t")
