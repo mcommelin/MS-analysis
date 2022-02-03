@@ -3,18 +3,15 @@
 
 library(tidyverse)
 
-dir <-  "data_LC"
-delim <- "\t"
-meta <-  TRUE
+
 # function to load data from LC, GS or individual compound analysis
 # beside the raw data also meta data is needed for the correct analysis of the samples
 # Fill the raw data header names corresponding to the convention names for columns and make sure each area column has the word 'Area' in it.
-tqs_code = "Name" #
-sample_text = "Sample.Text" #
-RT = "RT"
+
+
 
 # function to load raw data.
-load_raw_data <- function(dir, delim, meta) {
+load_raw_data <- function(dir, delim = "\t", meta = TRUE, tqs_code = "Name", sample_text = "Sample.Text", RT = "RT") {
 
 # find files in folder
 data_files <- dir(dir, pattern = ".*txt$", full.names = T)
