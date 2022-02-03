@@ -9,9 +9,16 @@ graphics.off() # cleaning plots
 '%!in%' <- function(x,y)!('%in%'(x,y))
 
 meta <-  TRUE # true is meta in sample txt 
-
 source("load_data.R")
+
+
 df_data=load_raw_data("data_LC", "\t", meta)
+IS=c("13C_Caffeine","13C_caffeine","13C_caffeine")
+cal.ref.pnt=c(2.5, 3.125, 3.125)
+
+load_raw_data <- function( df_data, IS, cal.ref.pnt) {  }
+
+
 
 batch.list=unique(df_data$batch)
 compound.batch.list=list()
@@ -50,7 +57,7 @@ df_data$dilution.factor=1
 
 # 0. Check the internal standard in all sample (OPTIONAL because: 
   # Ask if there is an internal Standard? for each batch? 
-    IS=c("13C_Caffeine","13C_caffeine","13C_caffeine")
+
     
   # calculate deviation, find autliers?
     
@@ -66,25 +73,94 @@ df_data$dilution.factor=1
     
 # 1. Calibration linearity range ####
   
-# Find calibration levels: 
-  df_data=df_data%>%
-  mutate(cal.level = if_else(an_type == "cal" | an_type == "Cal",
-                        as.numeric(str_extract(sample_text, "(\\d+\\.\\d*)|(\\d+)")), 0),
-       
-         cal.level = if_else(is.na(cal.level), 0, cal.level) )
-
-
-  for(b  in 1:(length(Batchnames)-1)){
-    for(c in seq_along(compound.batch[[i]])){
-      # Create Data Frame calibration : 
-      sub.cal.bc= subset( df_data, batch==batch.list[b] &
+  # Find calibration levels: 
+    df_data<-df_data%>%
+    mutate(cal.level = if_else(an_type == "cal" | an_type == "Cal",
+                          as.numeric(str_extract(sample_text, "(\\d+\\.\\d*)|(\\d+)")), 0),
+         
+           cal.level = if_else(is.na(cal.level), 0, cal.level) )
+  
+  # Summary of calibration results
+    df_cal=subset(df_data, an_type == "cal")
+    df_cal$conc=0
+    df_cal$slope=0
+    df_cal$intercept=0
+    df_cal$R2=0
+  
+  for(b  in seq_along(batch.list)){
+    for(c in seq_along(compound.batch.list[[b]])){
+      
+      # Create Data Frame of calibration for batch b, compound c: 
+      temp.cal.bc= subset( df_data, batch==batch.list[b] &
                           compound==compound.batch.list[[b]][c] &
                           an_type=="cal")
       
+      # linear model 
+      l.model=lm(cal.level~area1, temp.cal.bc)
+      
+      
+      df_cal %>%
+        
+        
+      df_cal$intercept[df_cal$batch==batch.list[b] & 
+                         df_cal$compound==compound.batch.list[[b]][c] ]=l.model[[1]][1]
+      df_cal$slope[df_cal$batch==batch.list[b] & 
+                   df_cal$compound==compound.batch.list[[b]][c] ]= l.model[[1]][2]
+
+      df_cal$R2[df_cal$batch==batch.list[b] & 
+                     df_cal$compound==compound.batch.list[[b]][c] ]= summary(l.model)$r.squared
+      
+
+       # Calibration  
+       df_cal$detec.conc=df_cal$area1*df_cal$slope+df_cal$intercept
+       
+       pnt <- 5
+       pnt_mean <- filter(cal, cal_conc == pnt)
+       pnt_mean <- mean(pnt_mean$mean)
+       
+       df_cal$recovery=df_cal$conc.lm/df_cal$cal.level
+       
+       cal.ref.pnt[b]
+
+       # Check that all Recovery are in [0.8, 1.2 ] : 1=True 0=False
+       df_cal$recovery.ck=0
+       df_cal$recovery.ck[df_cal$recovery<1.2 & df_cal$recovery>0.8]=1
     }
     }
 
 
+  # Optional: plot the calibation, all, per batch or specific compond
+    
+    for(b  in seq_along(batch.list)){
+      for(c in seq_along(compound.batch.list[[b]])){
+    
+    #R2 to be displayed on graph
+    R2 <- as.character(as.expression( substitute(
+      italic(R)^2~"="~r2,
+      list(r2 = format(  summary(l.model)$r.squared , digits = 3) )
+    )))
+    
+    slope =  df_cal$slope[]
+    
+    intercept = df_cal$intercept[]
+    
+    PLOT=ggplot(  temp.cal.bc, aes(x=area1, y=cal.level, color=cal.level))+
+      geom_point()+
+      geom_abline( slope =  l.model[[1]][2], intercept = l.model[[1]][1], size=1  )+
+      geom_text(x = 1000, y = 10, hjust = 0 , parse = TRUE, colour="black", show.legend = FALSE, size=5,
+                label =  R2  )+
+      ggtitle(label = paste(compound.batch.list[[b]][c],batch.list[b], sep = "_"  ))+
+      theme_minimal()+
+      theme(
+        axis.title.x = element_text(size=10),
+        axis.title.y = element_text(size=10),
+        axis.text.x  = element_text(size=9),
+        axis.text.y =  element_text(size=9))
+    print(PLOT)
+    
+      }
+    }
+    
 # 2. Ion ratio ####
   # Calculate Ion Ration and replace NA by 0
   df_data <- df_data %>%
@@ -96,10 +172,11 @@ df_data$dilution.factor=1
 # 3. Limit of quantification ####
   
   
+  
 # 4. Concentrations in samples and QCs  ####
   
   
-# 3. QCs recovery ####
+# 5. QCs recovery ####
 
 
 
