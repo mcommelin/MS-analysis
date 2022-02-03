@@ -52,15 +52,14 @@ data <- data %>%
          an_type = if_else(str_detect(Sample.Text, "matrix|test|[Ss]olvent"), "point", an_type),
          an_type = if_else(str_detect(Sample.Text, "[Cc]al|ng/mL|B\\d"), "curve", an_type),
          an_type = if_else(str_detect(Sample.Text, "[Ss]ta|[Ss]td"), "standard", an_type),
-         an_type = if_else(str_detect(Sample.Text, "QC|XY"), "QC", an_type),
-         matrix_type = str_extract(Sample.Text, "_._"),
-         matrix_type = str_extract(matrix_type, "[^_]"))
+         an_type = if_else(str_detect(Sample.Text, "QC|XY"), "QC", an_type))
 df_data[[i]] <- data
 }
+df_data <- bind_rows(df_data)
 return(df_data)
 }
 
-#load_raw_data("data_LC", "\t")
+df_data <- load_raw_data("data_LC", "\t")
 
 
 # add matrix type
