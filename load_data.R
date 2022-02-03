@@ -87,22 +87,27 @@ df_data <- load_raw_data("data_LC", "\t", meta)
 # otherwise produce a data file with col1 = tqs_code, and after that the relevant meta-data variablesS
 
 # Test user preparation of meta-data
-#meta <- read_csv("LC_weight.csv") %>%
-#  rename(sample_text = an_name) %>%
-#  mutate(matrix_type = str_extract(sample_text, "_._"),
-#         matrix_type = str_extract(matrix_type, "[^_]")) %>%
-#  select(-name)
-#meta_temp <- df_data %>%
-#  select(tqs_code, sample_text)%>%
-#  left_join(meta, by = "sample_text") %>%
-#  select(tqs_code, matrix_type)
-#write_delim(meta_temp, "data_LC/meta_file")
+meta <- read_csv("LC_weight.csv") %>%
+  rename(sample_text = an_name, 
+         weight_sample = aimed_w) %>%
+  mutate(matrix_type = str_extract(sample_text, "_._"),
+         matrix_type = str_extract(matrix_type, "[^_]"),
+         ACN_ml = weight_sample * 2,
+         ACN_factor = 1.1) %>%
+  select(-name)
+meta_temp <- df_data %>%
+  select(tqs_code, sample_text)%>%
+  left_join(meta, by = "sample_text") %>%
+  select(tqs_code, matrix_type, weight_sample, ACN_ml, ACN_factor)
+write_delim(meta_temp, "data_LC/meta_file")
 
 # Add meta data to data file
 # for the correct analysis the following variables are needed:
 # 1. analysis_type ("blank", "cal", "standard", "qc", "sample").
-# 2. matrx type ("water", "sediment", "soil") -- more can be added if needed
-# 3. weight_sample (weight of each sample in the tubes (mainly for sediment and water))
+# 2. matrix type ("water", "sediment", "soil") -- more can be added if needed
+# 3. weight_sample (weight of each sample in the tubes (only for extracted matrix types))
+# 4. ACN_ml (amount of ACN added during extraction (only for extracted matrix types))
+# 5. ACN_factor (ACN/H2O factor - default is 1.1)
 
 # Function to join meta_data to data table
 meta_data_add <- function(meta_file, df_data, load = TRUE) {
