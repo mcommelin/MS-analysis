@@ -83,9 +83,16 @@ return(df_data)
 #test
 df_data <- load_raw_data("data_LC", "\t", meta)
 
-# to add - function to load meta data from separate file
+# Add meta data to data file
+# for the correct analysis the following variables are needed:
+# 1. analysis_type ("blank", "cal", "standard", "qc", "sample").
+# 2. matrx type ("water", "sediment", "soil") -- more can be added if needed
+# 3. aimed_w_sample, ......
 
-# steps in code MC during data load:
-# - add initial/aimed weight for sediment/soil matrix samples - think about this
-# - add an ID to link the data to a dataset - not needed to write code
+# The analysis type can be derived from the sample_text - than put 'meta = TRUE' in the load function.
+# otherwise produce a data file with col1 = tqs_code, and after that the relevant meta-data variablesS
+
+
+
+# Possible user steps to do before moving to the next part of the analysis
 # - remove all redundant data from dilution batches. - separate function for dilutions
