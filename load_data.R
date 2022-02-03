@@ -5,7 +5,7 @@ library(tidyverse)
 
 dir <-  "data_LC"
 delim <- "\t"
-meta <-  FALSE
+meta <-  TRUE
 # function to load data from LC, GS or individual compound analysis
 # beside the raw data also meta data is needed for the correct analysis of the samples
 # Fill the raw data header names corresponding to the convention names for columns and make sure each area column has the word 'Area' in it.
@@ -66,9 +66,7 @@ if (meta == TRUE) {
 # add analysis type
 # add matrix type
 data <- data %>%
-  mutate(batch = str_remove(data_files[i], "\\..*$"),
-         batch = str_remove(batch, str_c("^", dir, "/")),
-         an_type = if_else(str_detect(sample_text, "[Bb]lank|blk"), "blank", "sample"),
+  mutate(an_type = if_else(str_detect(sample_text, "[Bb]lank|blk"), "blank", "sample"),
          an_type = if_else(str_detect(sample_text, "matrix|test|[Ss]olvent"), "standard", an_type),
          an_type = if_else(str_detect(sample_text, "[Cc]al|ng/mL|B\\d"), "cal", an_type),
          an_type = if_else(str_detect(sample_text, "[Ss]ta|[Ss]td"), "standard", an_type),
@@ -92,7 +90,33 @@ df_data <- load_raw_data("data_LC", "\t", meta)
 # The analysis type can be derived from the sample_text - than put 'meta = TRUE' in the load function.
 # otherwise produce a data file with col1 = tqs_code, and after that the relevant meta-data variablesS
 
+# Test user preparation of meta-data
+#meta <- read_csv("LC_weight.csv") %>%
+#  rename(sample_text = an_name) %>%
+#  mutate(matrix_type = str_extract(sample_text, "_._"),
+#         matrix_type = str_extract(matrix_type, "[^_]")) %>%
+#  select(-name)
+#meta_temp <- df_data %>%
+#  select(tqs_code, sample_text)%>%
+#  left_join(meta, by = "sample_text") %>%
+#  select(tqs_code, matrix_type)
+#write_delim(meta_temp, "data_LC/meta_file")
 
+# Function to join meta_data to data table
+meta_data_add <- function(meta_file, df_data, load = TRUE) {
+  if (load == TRUE) {
+    meta <- read_delim(meta_file)
+  } else {
+    meta <- meta_file
+  }
+  data <- df_data %>%
+    left_join(meta, by = "tqs_code") %>%
+    distinct()
+  return(data)
+}
+
+#test
+df_data <- meta_data_add("data_LC/meta_file", df_data)
 
 # Possible user steps to do before moving to the next part of the analysis
 # - remove all redundant data from dilution batches. - separate function for dilutions
