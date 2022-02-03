@@ -14,7 +14,9 @@ source("load_data.R")
 
 df_data=load_raw_data("data_LC", "\t", meta)
 IS=c("13C_Caffeine","13C_caffeine","13C_caffeine")
-cal.ref.pnt=c(2.5, 3.125, 3.125)
+cal.ref.pnt=c(1, 3.125, 3.125)
+
+df_data$an_type[grep("Std", df_data$sample_text)]="Std"
 
 load_raw_data <- function( df_data, IS, cal.ref.pnt) {  }
 
@@ -73,6 +75,7 @@ df_data$dilution.factor=1
     
 # 1. Calibration linearity range ####
   
+    
   # Find calibration levels: 
     df_data<-df_data%>%
     mutate(cal.level = if_else(an_type == "cal" | an_type == "Cal",
@@ -82,10 +85,7 @@ df_data$dilution.factor=1
   
   # Summary of calibration results
     df_cal=subset(df_data, an_type == "cal")
-    df_cal$conc=0
-    df_cal$slope=0
-    df_cal$intercept=0
-    df_cal$R2=0
+
   
   for(b  in seq_along(batch.list)){
     for(c in seq_along(compound.batch.list[[b]])){
@@ -95,36 +95,27 @@ df_data$dilution.factor=1
                           compound==compound.batch.list[[b]][c] &
                           an_type=="cal")
       
+      # Calibration linearity
+      temp.cal.bc= temp.cal.bc %>%
+        mutate( area.ref.mean= mean( area1[temp.cal.bc$cal.level==cal.ref.pnt[b]]),
+                linearity=area1 *cal.ref.pnt[b] /cal.level /area.ref.mean,
+                linearity.ck=if_else(linearity>0.7 & linearity<1.3, "1","0")  )
+     
       # linear model 
-      l.model=lm(cal.level~area1, temp.cal.bc)
+      l.model=lm(cal.level~area1, subset(temp.cal.bc,  linearity>0.7 & linearity<1.3)  )        
       
-      
-      df_cal %>%
+      temp.cal.bc=temp.cal.bc %>%
+        mutate(intercept=l.model[[1]][1],
+               slope=l.model[[1]][2],
+               R2=summary(l.model)$r.squared,
+               detec.conc=area1*slope+intercept )
         
+      df_cal[df_cal$batch==batch.list[b] & 
+             df_cal$compound==compound.batch.list[[b]][c],
+             c("area.ref.mean","linearity","intercept","slope","R2","detec.conc")] =  temp.cal.bc[, c("area.ref.mean","linearity","intercept","slope","R2","detec.conc")]
         
-      df_cal$intercept[df_cal$batch==batch.list[b] & 
-                         df_cal$compound==compound.batch.list[[b]][c] ]=l.model[[1]][1]
-      df_cal$slope[df_cal$batch==batch.list[b] & 
-                   df_cal$compound==compound.batch.list[[b]][c] ]= l.model[[1]][2]
 
-      df_cal$R2[df_cal$batch==batch.list[b] & 
-                     df_cal$compound==compound.batch.list[[b]][c] ]= summary(l.model)$r.squared
-      
-
-       # Calibration  
-       df_cal$detec.conc=df_cal$area1*df_cal$slope+df_cal$intercept
        
-       pnt <- 5
-       pnt_mean <- filter(cal, cal_conc == pnt)
-       pnt_mean <- mean(pnt_mean$mean)
-       
-       df_cal$recovery=df_cal$conc.lm/df_cal$cal.level
-       
-       cal.ref.pnt[b]
-
-       # Check that all Recovery are in [0.8, 1.2 ] : 1=True 0=False
-       df_cal$recovery.ck=0
-       df_cal$recovery.ck[df_cal$recovery<1.2 & df_cal$recovery>0.8]=1
     }
     }
 
@@ -144,7 +135,7 @@ df_data$dilution.factor=1
     
     intercept = df_cal$intercept[]
     
-    PLOT=ggplot(  temp.cal.bc, aes(x=area1, y=cal.level, color=cal.level))+
+    PLOT=ggplot(  temp.cal.bc, aes(x=area1, y=cal.level, color=linearity.ck))+
       geom_point()+
       geom_abline( slope =  l.model[[1]][2], intercept = l.model[[1]][1], size=1  )+
       geom_text(x = 1000, y = 10, hjust = 0 , parse = TRUE, colour="black", show.legend = FALSE, size=5,
