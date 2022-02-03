@@ -47,6 +47,7 @@ df_data$dilution.factor=1
 #     -stability of recovery / Compound over all batches
 #     -calculate a column of corrected concentration C.matrix.cor
 
+
 # 0. Check the internal standard in all sample (OPTIONAL because: 
   # Ask if there is an internal Standard? for each batch? 
     IS=c("13C_Caffeine","13C_caffeine","13C_caffeine")
@@ -56,11 +57,11 @@ df_data$dilution.factor=1
   # Ask if want to remove the internal standard
     df_data=subset(df_data, compound %!in% IS)
     
-    for (b in seq_along(df_data)){
-      compound.batch.list[[b]]=compound.batch.list[[b]][compound.batch.list[[b]]!=IS]
+    for (b in seq_along(batch.list)){
+      compound.batch.list[[b]]=compound.batch.list[[b]][compound.batch.list[[b]]!=IS[b]]
     }
-    compound.batch.list==IS
-    subset( compound.batch.list[[b]], compound!= IS)
+
+    
     
     
 # 1. Calibration linearity range ####
