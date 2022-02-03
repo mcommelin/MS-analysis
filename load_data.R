@@ -68,8 +68,8 @@ if (meta == TRUE) {
 data <- data %>%
   mutate(an_type = if_else(str_detect(sample_text, "[Bb]lank|blk"), "blank", "sample"),
          an_type = if_else(str_detect(sample_text, "matrix|test|[Ss]olvent"), "standard", an_type),
-         an_type = if_else(str_detect(sample_text, "[Cc]al|ng/mL|B\\d"), "cal", an_type),
          an_type = if_else(str_detect(sample_text, "[Ss]ta|[Ss]td"), "standard", an_type),
+         an_type = if_else(str_detect(sample_text, "[Cc]al|ng/mL|B\\d"), "cal", an_type),
          an_type = if_else(str_detect(sample_text, "QC|XY"), "QC", an_type))
 }
 df_data[[i]] <- data
@@ -81,11 +81,7 @@ return(df_data)
 #test
 df_data <- load_raw_data("data_LC", "\t", meta)
 
-# Add meta data to data file
-# for the correct analysis the following variables are needed:
-# 1. analysis_type ("blank", "cal", "standard", "qc", "sample").
-# 2. matrx type ("water", "sediment", "soil") -- more can be added if needed
-# 3. aimed_w_sample, ......
+
 
 # The analysis type can be derived from the sample_text - than put 'meta = TRUE' in the load function.
 # otherwise produce a data file with col1 = tqs_code, and after that the relevant meta-data variablesS
@@ -101,6 +97,12 @@ df_data <- load_raw_data("data_LC", "\t", meta)
 #  left_join(meta, by = "sample_text") %>%
 #  select(tqs_code, matrix_type)
 #write_delim(meta_temp, "data_LC/meta_file")
+
+# Add meta data to data file
+# for the correct analysis the following variables are needed:
+# 1. analysis_type ("blank", "cal", "standard", "qc", "sample").
+# 2. matrx type ("water", "sediment", "soil") -- more can be added if needed
+# 3. weight_sample (weight of each sample in the tubes (mainly for sediment and water))
 
 # Function to join meta_data to data table
 meta_data_add <- function(meta_file, df_data, load = TRUE) {
