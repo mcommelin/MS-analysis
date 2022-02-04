@@ -13,18 +13,18 @@ To load this raw data the function 'load_raw_data' was developed. (see functions
 ### meta data file
 The meta-data contains three relevant columns which add for the analysis. Because the content of this data is often user specific, this has to be prepared seperatly. The expected column names are (these names need to be exactly the same for follow up calculations)
   
-  - tqs_code          The tqs_code is used as identifier for all samples from the raw data
-  - an_type           The 'type' of the sample for analysis
-  - correction_factor The dilution of the sample within during the extraction process and in the vial
-  - dilution_factor   The extra dilutions done to dilute high concentrations to be within the measurement domain of the MS machine.
+  - tqs_code: The tqs_code is used as identifier for all samples from the raw data
+  - an_type: The 'type' of the sample for analysis
+  - correction_factor: The dilution of the sample within during the extraction process and in the vial
+  - dilution_factor: The extra dilutions done to dilute high concentrations to be within the measurement domain of the MS machine.
   
 The analysis types (an_type) are divided in the following groups: sample, cal, standard, qc and blank.
 
-  - sample    This are the samples in the measurement
-  - cal       The calibration curve samples, the concentration of the specific calibration points should be part of the 'sample_text' variable e.g. (Cal_6.25_ng/mL)
-  - standard  a single standard point to check stability of the machine, not included in the calibration curve
-  - qc        Sample with spiked concentrations to check the recovery for specific matrixes
-  - blank     Milliq water vials, to clean and/or check the bias of the machine.
+  - sample: This are the samples in the measurement
+  - cal: The calibration curve samples, the concentration of the specific calibration points should be part of the 'sample_text' variable e.g. (Cal_6.25_ng/mL)
+  - standard: a single standard point to check stability of the machine, not included in the calibration curve
+  - qc: Sample with spiked concentrations to check the recovery for specific matrixes
+  - blank: Milliq water vials, to clean and/or check the bias of the machine.
   
 Important: use these specific analysis type names and column names so follow up functions will work properly. The metadata file can be added to the raw data with the function 'meta_data_add' (see function section).
 
@@ -58,8 +58,9 @@ The function expects to find the word 'area' in every column header which stores
 
 ### meta_data_add()
 
-meta_data_add(meta_file, df_data, load = TRUE)
+meta_data_add(meta_file, df_data, delim, load = TRUE)
 
   - meta_file: either a file location e.g. ("data/meta_file.txt"), or a dataframe in R environment
   - df_data: the result of load_raw_data()
+  - delim: the delimiter used in the meta_data file
   - load: TRUE = load file from specified location, FALSE = the data is already in R.
