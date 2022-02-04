@@ -14,11 +14,13 @@ source("load_data.R")
 
 df_data=load_raw_data("data_LC", "\t", meta)
 IS=c("13C_Caffeine","13C_caffeine","13C_caffeine")
-cal.ref.pnt=c(1, 3.125, 3.125)
+cal.ref.pnt=c(1, 1, 1)
 
 df_data$an_type[grep("Std", df_data$sample_text)]="Std"
 
-load_raw_data <- function( df_data, IS, cal.ref.pnt) {  }
+
+
+ <- function( df_data, IS, cal.ref.pnt) {  }
 
 
 
@@ -42,6 +44,7 @@ df_data$dilution.factor=1
 
 #   3. Calculate the Limit of detection : Lowest calibration point, 
 #                                         in IR range,
+#                                         in linearity range
 #     Retun table of lOQ /Batch/ Compound
 #     Return vector of highest LOQ/ Compound over all batches
 
