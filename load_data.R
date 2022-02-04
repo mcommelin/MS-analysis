@@ -11,7 +11,7 @@ library(tidyverse)
 
 
 # function to load raw data.
-load_raw_data <- function(dir, delim = "\t", meta = TRUE, tqs_code = "Name", sample_text = "Sample.Text", RT = "RT") {
+load_raw_data <- function(dir, delim = "\t", tqs_code = "Name", sample_text = "Sample.Text", RT = "RT") {
 
 # find files in folder
 data_files <- dir(dir, pattern = ".*txt$", full.names = T)
@@ -58,17 +58,6 @@ for (j in seq_along(compounds)) {
 data$compound[((j-1)*n_samp+1):(j*n_samp)]= compounds[j]
 }
 
-if (meta == TRUE) {
-# add batch name
-# add analysis type
-# add matrix type
-data <- data %>%
-  mutate(an_type = if_else(str_detect(sample_text, "[Bb]lank|blk"), "blank", "sample"),
-         an_type = if_else(str_detect(sample_text, "matrix|test|[Ss]olvent"), "standard", an_type),
-         an_type = if_else(str_detect(sample_text, "[Ss]ta|[Ss]td"), "standard", an_type),
-         an_type = if_else(str_detect(sample_text, "[Cc]al|ng/mL|B\\d"), "cal", an_type),
-         an_type = if_else(str_detect(sample_text, "QC|XY"), "QC", an_type))
-}
 df_data[[i]] <- data
 }
 df_data <- bind_rows(df_data)
@@ -76,9 +65,7 @@ return(df_data)
 }
 
 #test
-df_data <- load_raw_data("data_LC", "\t", meta)
-
-
+df_data <- load_raw_data("data_LC", "\t")
 
 # The analysis type can be derived from the sample_text - than put 'meta = TRUE' in the load function.
 # otherwise produce a data file with col1 = tqs_code, and after that the relevant meta-data variablesS
@@ -90,13 +77,27 @@ meta <- read_csv("LC_weight.csv") %>%
   mutate(matrix_type = str_extract(sample_text, "_._"),
          matrix_type = str_extract(matrix_type, "[^_]"),
          ACN_ml = weight_sample * 2,
-         ACN_factor = 1.1) %>%
+         ACN_factor = 1.1,
+         an_type = if_else(str_detect(sample_text, "[Bb]lank|blk"), "blank", "sample"),
+         an_type = if_else(str_detect(sample_text, "matrix|test|[Ss]olvent"), "standard", an_type),
+         an_type = if_else(str_detect(sample_text, "[Ss]ta|[Ss]td"), "standard", an_type),
+         an_type = if_else(str_detect(sample_text, "[Cc]al|ng/mL|B\\d"), "cal", an_type),
+         an_type = if_else(str_detect(sample_text, "QC|XY"), "QC", an_type)) %>%
   select(-name)
 meta_temp <- df_data %>%
   select(tqs_code, sample_text)%>%
   left_join(meta, by = "sample_text") %>%
-  select(tqs_code, matrix_type, weight_sample, ACN_ml, ACN_factor)
-write_delim(meta_temp, "data_LC/meta_file")
+  select(tqs_code, matrix_type, weight_sample, ACN_ml, ACN_factor, an_type)
+write_delim(meta_temp, "data_LC/meta_file.txt")
+
+#find an_type from sample text.
+# add analysis type
+data <- data %>%
+  mutate(an_type = if_else(str_detect(sample_text, "[Bb]lank|blk"), "blank", "sample"),
+         an_type = if_else(str_detect(sample_text, "matrix|test|[Ss]olvent"), "standard", an_type),
+         an_type = if_else(str_detect(sample_text, "[Ss]ta|[Ss]td"), "standard", an_type),
+         an_type = if_else(str_detect(sample_text, "[Cc]al|ng/mL|B\\d"), "cal", an_type),
+         an_type = if_else(str_detect(sample_text, "QC|XY"), "QC", an_type))
 
 # Add meta data to data file
 # for the correct analysis the following variables are needed:
