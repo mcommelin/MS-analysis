@@ -12,15 +12,15 @@ meta <-  TRUE # true is meta in sample txt
 source("load_data.R")
 
 
-df_data=load_raw_data("data_LC", "\t", meta)
-IS=c("13C_Caffeine","13C_caffeine","13C_caffeine")
+IS=c("13C_Caffeine","13C_Caffeine","13C_Caffeine")
 cal.ref.pnt=c(1, 1, 1)
 
 df_data$an_type[grep("Std", df_data$sample_text)]="Std"
 
+delta_linearity=0.3
+alpha_IR=0.3
 
-
- <- function( df_data, IS, cal.ref.pnt) {  }
+calculate.concentration <- function( df_data, IS, cal.ref.pnt, delta_linearity, alpha_IR) {  }
 
 
 
@@ -60,7 +60,8 @@ df_data$dilution.factor=1
 #     -calculate a column of corrected concentration C.matrix.cor
 
 
-# 0. Check the internal standard in all sample (OPTIONAL because: 
+# 0. Check the internal standard in all sample ####
+#(OPTIONAL because: )
   # Ask if there is an internal Standard? for each batch? 
 
     
@@ -73,13 +74,18 @@ df_data$dilution.factor=1
       compound.batch.list[[b]]=compound.batch.list[[b]][compound.batch.list[[b]]!=IS[b]]
     }
 
+# 1. Ion ratio ####
+  # Calculate Ion Ration and replace NA by 0
+  df_data <- df_data %>%
+    mutate(IR = area2/area1,
+           IR=if_else(is.na(IR)|is.infinite(IR), 0,IR) )   
+  
+  # //!\\ CHECK Area1> area2 ??
     
-    
-    
-# 1. Calibration linearity range ####
+# 2. Calibration linearity range ####
   
     
-  # Find calibration levels: 
+  # * Find calibration levels ---- 
     df_data<-df_data%>%
     mutate(cal.level = if_else(an_type == "cal" | an_type == "Cal",
                           as.numeric(str_extract(sample_text, "(\\d+\\.\\d*)|(\\d+)")), 0),
@@ -98,14 +104,23 @@ df_data$dilution.factor=1
                           compound==compound.batch.list[[b]][c] &
                           an_type=="cal")
       
-      # Calibration linearity
+      # * Calibration linearity ----
       temp.cal.bc= temp.cal.bc %>%
         mutate( area.ref.mean= mean( area1[temp.cal.bc$cal.level==cal.ref.pnt[b]]),
                 linearity=area1 *cal.ref.pnt[b] /cal.level /area.ref.mean,
-                linearity.ck=if_else(linearity>0.7 & linearity<1.3, "1","0")  )
+                linearity.ck=if_else(linearity> (1-delta_linearity) & linearity< (1+delta_linearity), "1","0"),
+                
+                # * Ion Ration reference  ----
+                IR_ref=mean(subset( temp.cal.bc, linearity.ck==1)$IR), # Calculate Ion Ration reference with the calibration in the linearity range
+                IR_ck=if_else(IR> (1-alpha_IR)*IR_ref & IR< (1+alpha_IR)*IR_ref, "1","0"),
+        ) 
      
+     
+     subset(temp.cal.bc, linearity.ck=="1" )
+      
+      
       # linear model 
-      l.model=lm(cal.level~area1, subset(temp.cal.bc,  linearity>0.7 & linearity<1.3)  )        
+      l.model=lm(cal.level~area1, subset(temp.cal.bc,  linearity.ck==1  )   )     
       
       temp.cal.bc=temp.cal.bc %>%
         mutate(intercept=l.model[[1]][1],
@@ -115,13 +130,14 @@ df_data$dilution.factor=1
         
       df_cal[df_cal$batch==batch.list[b] & 
              df_cal$compound==compound.batch.list[[b]][c],
-             c("area.ref.mean","linearity","intercept","slope","R2","detec.conc")] =  temp.cal.bc[, c("area.ref.mean","linearity","intercept","slope","R2","detec.conc")]
+             c("area.ref.mean","linearity", "linearity.ck","intercept","slope","R2","detec.conc")] =  temp.cal.bc[, c("area.ref.mean","linearity","linearity.ck","intercept","slope","R2","detec.conc")]
         
 
        
     }
     }
 
+} # end of the function calibration 
 
   # Optional: plot the calibation, all, per batch or specific compond
     
@@ -129,18 +145,22 @@ df_data$dilution.factor=1
       for(c in seq_along(compound.batch.list[[b]])){
     
     #R2 to be displayed on graph
+    
+      temp.df.cal.bc= subset(  df_cal, batch==batch.list[b] &
+                               compound==compound.batch.list[[b]][c] )    
+      
     R2 <- as.character(as.expression( substitute(
       italic(R)^2~"="~r2,
-      list(r2 = format(  summary(l.model)$r.squared , digits = 3) )
+      list(r2 = format( unique(temp.df.cal.bc$R2) , digits = 3) )
     )))
     
-    slope =  df_cal$slope[]
+    slope =  unique(temp.df.cal.bc$slope)
     
-    intercept = df_cal$intercept[]
+    intercept = unique(temp.df.cal.bc$intercept)
     
-    PLOT=ggplot(  temp.cal.bc, aes(x=area1, y=cal.level, color=linearity.ck))+
+    PLOT=ggplot(  temp.df.cal.bc, aes(x=area1, y=cal.level, color=linearity.ck))+
       geom_point()+
-      geom_abline( slope =  l.model[[1]][2], intercept = l.model[[1]][1], size=1  )+
+      geom_abline( slope = slope, intercept =  intercept, size=1  )+
       geom_text(x = 1000, y = 10, hjust = 0 , parse = TRUE, colour="black", show.legend = FALSE, size=5,
                 label =  R2  )+
       ggtitle(label = paste(compound.batch.list[[b]][c],batch.list[b], sep = "_"  ))+
@@ -155,13 +175,6 @@ df_data$dilution.factor=1
       }
     }
     
-# 2. Ion ratio ####
-  # Calculate Ion Ration and replace NA by 0
-  df_data <- df_data %>%
-    mutate(IR = Area1/Area2,
-           IR=if_else(is.na(IR)|is.infinite(IR), 0,IR) )
-  
-  df_data$IR
 
 # 3. Limit of quantification ####
   
