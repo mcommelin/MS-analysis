@@ -19,7 +19,7 @@ calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, al
   # Ask if there is an internal Standard? for each batch? 
   
   
-  # calculate deviation, find autliers?
+  # calculate deviation, find outliers?
   
   # Ask if want to remove the internal standard
   df_data=subset(df_data, compound %!in% IS)
@@ -38,13 +38,6 @@ calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, al
   # //!\\ CHECK Area1> area2 ??
   
 # 2. Calibration calculation ####
-  # * Find calibration levels ---- 
-  df_data<-df_data%>%
-    mutate(cal.level = if_else(an_type == "cal" | an_type == "Cal",
-                               as.numeric(str_extract(sample_text, "(\\d+\\.\\d*)|(\\d+)")), 0),
-           
-           cal.level = if_else(is.na(cal.level), 0, cal.level) )
-  
   # Summary of calibration results
   df_cal=subset(df_data, an_type == "cal")
   
@@ -59,7 +52,7 @@ calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, al
       
       # * Calibration linearity ----
       temp.cal.bc= temp.cal.bc %>%
-        mutate( area.ref.mean= mean( area1[temp.cal.bc$cal.level==cal.ref.pnt[b]]),
+        mutate( area.ref.mean = mean( area1[temp.cal.bc$cal.level==cal.ref.pnt[b]]),
                 linearity=area1 *cal.ref.pnt[b] /cal.level /area.ref.mean,
                 linearity.ck=if_else(linearity> (1-delta_linearity) & linearity< (1+delta_linearity), "1","0"),
                 
