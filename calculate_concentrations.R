@@ -38,14 +38,11 @@ df_data=load_raw_data("test1", "\t")
 df_data=meta_data_add("test1_meta.data.txt", delim="/t", df_data =df_data, T )
 
 
-IS=c("13C_Caffeine","13C_Caffeine","13C_Caffeine")
-cal.ref.pnt=c(1, 1, 1)
-delta_linearity=0.3
-alpha_IR=0.3
 
 
 
-calculate.calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, alpha_IR) {
+
+calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, alpha_IR) {
   
   '%!in%' <- function(x,y)!('%in%'(x,y))
 
@@ -149,7 +146,15 @@ for (b in seq_along(batch.list)){
 
   # Optional: plot the calibation, all, per batch or specific compond
 
+IS=c("13C_Caffeine","13C_Caffeine","13C_Caffeine")
+cal.ref.pnt=c(1, 1, 1)
+delta_linearity=0.3
+alpha_IR=0.3
 
+df_cal=calculate_calibration(df_data, IS, cal.ref.pnt, delta_linearity, alpha_IR)
+calibration_plot(df_cal)
+
+calibration_plot=function( df_cal) {#improve with ether select batch and or compound and or all 
     
     for(b  in seq_along(batch.list)){
       for(c in seq_along(compound.batch.list[[b]])){
@@ -184,7 +189,7 @@ for (b in seq_along(batch.list)){
     
       }
     }
-    
+}
 
 # 3. Limit of quantification ####
   
