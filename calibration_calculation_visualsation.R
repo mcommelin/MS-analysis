@@ -79,7 +79,7 @@ calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, al
       
       df_cal[df_cal$batch==batch.list[b] & 
                df_cal$compound==compound.batch.list[[b]][c],
-             c("area.ref.mean","linearity", "linearity.ck","intercept","slope","R2","detec.conc")] =  temp.cal.bc[, c("area.ref.mean","linearity","linearity.ck","intercept","slope","R2","detec.conc")]
+             c("area.ref.mean","linearity", "linearity.ck","IR_ck","intercept","slope","R2","detec.conc")] =  temp.cal.bc[, c("area.ref.mean","linearity","linearity.ck","IR_ck","intercept","slope","R2","detec.conc")]
       
     }
   }
