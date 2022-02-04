@@ -1,39 +1,5 @@
 #Analyse GC-MS, LC-MS and specific compound results
 
-#LC calculation
-
-#Process compounds - user specific?
-rm(list=ls()) # cleaning console
-graphics.off() # cleaning plots
-
-'%!in%' <- function(x,y)!('%in%'(x,y))
-
-meta <-  TRUE # true is meta in sample txt 
-source("load_data.R")
-
-
-IS=c("13C_Caffeine","13C_Caffeine","13C_Caffeine")
-cal.ref.pnt=c(1, 1, 1)
-
-df_data$an_type[grep("Std", df_data$sample_text)]="Std"
-
-delta_linearity=0.3
-alpha_IR=0.3
-
-calculate.concentration <- function( df_data, IS, cal.ref.pnt, delta_linearity, alpha_IR) {  }
-
-
-
-batch.list=unique(df_data$batch)
-compound.batch.list=list()
-
-for (b in seq_along(batch.list)){
-compound.batch.list[[b]]=unique(df_data$compound[df_data$batch==batch.list[b]])
-}
-
-df_data$corr.factor=4.4 
-df_data$dilution.factor=1
-
 # The calculation involves 5 different steps : 
 #   1. Find linearity range with the Calibration /Batch/compound
 #     -compare the calibration per batch?
@@ -59,20 +25,58 @@ df_data$dilution.factor=1
 #     -stability of recovery / Compound over all batches
 #     -calculate a column of corrected concentration C.matrix.cor
 
+#Process compounds - user specific?
+rm(list=ls()) # cleaning console
+graphics.off() # cleaning plots
+
+
+
+source("load_data.R")
+
+df_data=load_raw_data("test1", "\t")
+
+df_data=meta_data_add("test1_meta.data.txt", delim="/t", df_data =df_data, T )
+
+
+IS=c("13C_Caffeine","13C_Caffeine","13C_Caffeine")
+cal.ref.pnt=c(1, 1, 1)
+delta_linearity=0.3
+alpha_IR=0.3
+
+
+
+calculate.calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, alpha_IR) {
+  
+  '%!in%' <- function(x,y)!('%in%'(x,y))
+
+# Read the batch list 
+batch.list=unique(df_data$batch)
+compound.batch.list=list()
+
+for (b in seq_along(batch.list)){
+compound.batch.list[[b]]=unique(df_data$compound[df_data$batch==batch.list[b]])
+}
+
 
 # 0. Check the internal standard in all sample ####
 #(OPTIONAL because: )
-  # Ask if there is an internal Standard? for each batch? 
+# Ask if there is an internal Standard? for each batch? 
 
-    
-  # calculate deviation, find autliers?
-    
-  # Ask if want to remove the internal standard
-    df_data=subset(df_data, compound %!in% IS)
-    
-    for (b in seq_along(batch.list)){
-      compound.batch.list[[b]]=compound.batch.list[[b]][compound.batch.list[[b]]!=IS[b]]
-    }
+
+# calculate deviation, find autliers?
+
+# Ask if want to remove the internal standard
+df_data=subset(df_data, compound %!in% IS)
+
+for (b in seq_along(batch.list)){
+  compound.batch.list[[b]]=compound.batch.list[[b]][compound.batch.list[[b]]!=IS[b]]
+}
+
+
+
+
+
+
 
 # 1. Ion ratio ####
   # Calculate Ion Ration and replace NA by 0
@@ -111,8 +115,11 @@ df_data$dilution.factor=1
                 linearity.ck=if_else(linearity> (1-delta_linearity) & linearity< (1+delta_linearity), "1","0"),
                 
                 # * Ion Ration reference  ----
-                IR_ref=mean(subset( temp.cal.bc, linearity.ck==1)$IR), # Calculate Ion Ration reference with the calibration in the linearity range
-                IR_ck=if_else(IR> (1-alpha_IR)*IR_ref & IR< (1+alpha_IR)*IR_ref, "1","0"),
+                IR_ref0=mean( IR[temp.cal.bc$cal.level==cal.ref.pnt[b]]),  # First take IR of the ref cal point for ref
+                IR_ck0=if_else(IR> 0.5*IR_ref0 & IR< 1.5*IR_ref0, "1","0"), # cut out all cal not in .5-1.5 IR_ref0
+      
+                IR_ref=mean(subset( temp.cal.bc, linearity.ck=="1" & IR_ck0=="1" )$IR), # Calculate Ion Ration reference with the calibration in the linearity range and .55-1.45 IR_ref0
+                IR_ck=if_else(IR> (1-alpha_IR)*IR_ref & IR< (1+alpha_IR)*IR_ref, "1","0")
         ) 
      
      
@@ -120,7 +127,7 @@ df_data$dilution.factor=1
       
       
       # linear model 
-      l.model=lm(cal.level~area1, subset(temp.cal.bc,  linearity.ck==1  )   )     
+      l.model=lm(cal.level~area1, subset(temp.cal.bc,  linearity.ck=="1" & IR_ck=="1"  )   )     
       
       temp.cal.bc=temp.cal.bc %>%
         mutate(intercept=l.model[[1]][1],
@@ -137,9 +144,12 @@ df_data$dilution.factor=1
     }
     }
 
+    return(df_cal)
 } # end of the function calibration 
 
   # Optional: plot the calibation, all, per batch or specific compond
+
+
     
     for(b  in seq_along(batch.list)){
       for(c in seq_along(compound.batch.list[[b]])){
