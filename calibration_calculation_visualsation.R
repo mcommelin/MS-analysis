@@ -99,16 +99,19 @@ calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, al
 
 calibration_plot=function( df_cal) {#improve with ether select batch and or compound and or all 
   
+  # Read the batch and compound list 
+  batch.list=unique(df_cal$batch)
+  compound.batch.list=list()
+      
+  for (b in seq_along(batch.list)){
+    compound.batch.list[[b]]=unique(df_cal$compound[df_cal$batch==batch.list[b]])
+  }
+      
+      
+      
   for(b  in seq_along(batch.list)){
     for(c in seq_along(compound.batch.list[[b]])){
       
-      # Read the batch and compound list 
-      batch.list=unique(df_cal$batch)
-      compound.batch.list=list()
-      
-      for (b in seq_along(batch.list)){
-        compound.batch.list[[b]]=unique(df_cal$compound[df_cal$batch==batch.list[b]])
-      }
       
       
       
