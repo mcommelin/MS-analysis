@@ -17,6 +17,7 @@ The meta-data contains three relevant columns which add for the analysis. Becaus
   - an_type: The 'type' of the sample for analysis
   - correction_factor: The dilution of the sample within during the extraction process and in the vial
   - dilution_factor: The extra dilutions done to dilute high concentrations to be within the measurement domain of the MS machine.
+  - cal.level: the concentration for each calibration curve point
   
 The analysis types (an_type) are divided in the following groups: sample, cal, standard, qc and blank.
 
@@ -64,3 +65,5 @@ meta_data_add(meta_file, df_data, delim, load = TRUE)
   - df_data: the result of load_raw_data()
   - delim: the delimiter used in the meta_data file
   - load: TRUE = load file from specified location, FALSE = the data is already in R.
+
+Note: this function will drop all columns that are not needed for follow up functions in the analysis procedure.

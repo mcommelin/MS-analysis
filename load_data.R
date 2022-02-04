@@ -82,6 +82,8 @@ meta_data_add <- function(meta_file, df_data, load = TRUE, delim) {
   } else {
     meta <- meta_file
   }
+  meta <- meta %>%
+    select(tqs_code, an_type, dilution_factor, correction_factor, cal.level)
   data <- df_data %>%
     left_join(meta, by = "tqs_code") %>%
     distinct()
