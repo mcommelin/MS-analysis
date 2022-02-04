@@ -63,7 +63,7 @@ return(df_data)
 }
 
 #test
-df_data <- load_raw_data("data_LC", "\t")
+#df_data <- load_raw_data("data_LC", "\t")
 
 # Add meta data to data file
 # for the correct analysis the following variables are needed:
@@ -76,9 +76,9 @@ df_data <- load_raw_data("data_LC", "\t")
 # 7. ACN_factor (ACN/H2O factor - default is 1.1)
 
 # Function to join meta_data to data table
-meta_data_add <- function(meta_file, df_data, load = TRUE) {
+meta_data_add <- function(meta_file, df_data, load = TRUE, delim) {
   if (load == TRUE) {
-    meta <- read_delim(meta_file)
+    meta <- read_delim(meta_file, delim = delim)
   } else {
     meta <- meta_file
   }
@@ -89,7 +89,7 @@ meta_data_add <- function(meta_file, df_data, load = TRUE) {
 }
 
 #test
-df_data <- meta_data_add("data_LC/meta_file", df_data)
+#df_data <- meta_data_add("meta_test2.txt", df_data, delim = " ")
 
 # Possible user steps to do before moving to the next part of the analysis
 # - remove all redundant data from dilution batches. - separate function for dilutions
