@@ -32,11 +32,18 @@ Important: use these specific analysis type names and column names so follow up 
 
 ### load_raw_data()
 
-load_raw_data(dir, delim = "\t", meta = TRUE, tqs_code = "Name", sample_text = "Sample.Text", RT = "RT")
+load_raw_data(dir, delim = "\t", tqs_code = "Name", sample_text = "Sample.Text", RT = "RT")
 
   - dir: the directory were the txt file(s) are stored. Each file is the result of 1 machine batch.
   - delim: the delimiter in the raw data files, default is "\t"
-  - meta: does the 'sample.text' column contain information on analysis type, default is TRUE
   - tqs_code, sample_text, RT - header names for these three columns, used to homogenize data for further analysis.
 
 The function expects to find the word 'area' in every column header which stores peak area data, it will then rename these automatically.
+
+### meta_data_add()
+
+meta_data_add(meta_file, df_data, load = TRUE)
+
+  - meta_file: either a file location e.g. ("data/meta_file.txt"), or a dataframe in R environment
+  - df_data: the result of load_raw_data()
+  - load: TRUE = load file from specified location, FALSE = the data is already in R.
