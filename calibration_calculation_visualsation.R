@@ -102,6 +102,16 @@ calibration_plot=function( df_cal) {#improve with ether select batch and or comp
   for(b  in seq_along(batch.list)){
     for(c in seq_along(compound.batch.list[[b]])){
       
+      # Read the batch and compound list 
+      batch.list=unique(df_cal$batch)
+      compound.batch.list=list()
+      
+      for (b in seq_along(batch.list)){
+        compound.batch.list[[b]]=unique(df_cal$compound[df_cal$batch==batch.list[b]])
+      }
+      
+      
+      
       #R2 to be displayed on graph
       
       temp.df.cal.bc= subset(  df_cal, batch==batch.list[b] &
