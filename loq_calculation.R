@@ -30,7 +30,7 @@ loq_calculation=function( df_cal) {
       
       loq_vial[loq_vial$batch==batch.list[b], compound.list.all[c]]= min( df_cal$cal.level[  # minimum calibration point
         df_cal$batch==batch.list[b] & df_cal$compound==compound.list.all[c] &    # for batch b and compound c 
-        df_cal$area1>75 &                                             # additional criteria based on expert judgment
+        df_cal$area1>100 &                                             # additional criteria based on expert judgment
         df_cal$linearity.ck=="1"  & df_cal$IR_ck=="1"] )                  # inside the linearity and IR range
   
     }
