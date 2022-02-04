@@ -8,13 +8,11 @@ library(tidyverse)
 # beside the raw data also meta data is needed for the correct analysis of the samples
 # Fill the raw data header names corresponding to the convention names for columns and make sure each area column has the word 'Area' in it.
 
-
-
 # function to load raw data.
 load_raw_data <- function(dir, delim = "\t", tqs_code = "Name", sample_text = "Sample.Text", RT = "RT") {
 
 # find files in folder
-data_files <- dir(dir, pattern = ".*txt$", full.names = T)
+data_files <- dir(dir, full.names = T)
 df_data <- vector("list", length = length(data_files))
 
 for( i in seq_along(data_files)) {
@@ -67,45 +65,15 @@ return(df_data)
 #test
 df_data <- load_raw_data("data_LC", "\t")
 
-# The analysis type can be derived from the sample_text - than put 'meta = TRUE' in the load function.
-# otherwise produce a data file with col1 = tqs_code, and after that the relevant meta-data variablesS
-
-# Test user preparation of meta-data
-meta <- read_csv("LC_weight.csv") %>%
-  rename(sample_text = an_name, 
-         weight_sample = aimed_w) %>%
-  mutate(matrix_type = str_extract(sample_text, "_._"),
-         matrix_type = str_extract(matrix_type, "[^_]"),
-         ACN_ml = weight_sample * 2,
-         ACN_factor = 1.1,
-         an_type = if_else(str_detect(sample_text, "[Bb]lank|blk"), "blank", "sample"),
-         an_type = if_else(str_detect(sample_text, "matrix|test|[Ss]olvent"), "standard", an_type),
-         an_type = if_else(str_detect(sample_text, "[Ss]ta|[Ss]td"), "standard", an_type),
-         an_type = if_else(str_detect(sample_text, "[Cc]al|ng/mL|B\\d"), "cal", an_type),
-         an_type = if_else(str_detect(sample_text, "QC|XY"), "QC", an_type)) %>%
-  select(-name)
-meta_temp <- df_data %>%
-  select(tqs_code, sample_text)%>%
-  left_join(meta, by = "sample_text") %>%
-  select(tqs_code, matrix_type, weight_sample, ACN_ml, ACN_factor, an_type)
-write_delim(meta_temp, "data_LC/meta_file.txt")
-
-#find an_type from sample text.
-# add analysis type
-data <- data %>%
-  mutate(an_type = if_else(str_detect(sample_text, "[Bb]lank|blk"), "blank", "sample"),
-         an_type = if_else(str_detect(sample_text, "matrix|test|[Ss]olvent"), "standard", an_type),
-         an_type = if_else(str_detect(sample_text, "[Ss]ta|[Ss]td"), "standard", an_type),
-         an_type = if_else(str_detect(sample_text, "[Cc]al|ng/mL|B\\d"), "cal", an_type),
-         an_type = if_else(str_detect(sample_text, "QC|XY"), "QC", an_type))
-
 # Add meta data to data file
 # for the correct analysis the following variables are needed:
-# 1. analysis_type ("blank", "cal", "standard", "qc", "sample").
-# 2. matrix type ("water", "sediment", "soil") -- more can be added if needed
-# 3. weight_sample (weight of each sample in the tubes (only for extracted matrix types))
-# 4. ACN_ml (amount of ACN added during extraction (only for extracted matrix types))
-# 5. ACN_factor (ACN/H2O factor - default is 1.1)
+# 1. tqs_code
+# 2. analysis_type ("blank", "cal", "standard", "qc", "sample").
+# 3. matrix type ("water", "sediment", "soil") -- more can be added if needed
+# 4. dilution.factor (dilution factor of extract)
+# 5. weight_sample (weight of each sample in the tubes (only for extracted matrix types))
+# 6. ACN_ml (amount of ACN added during extraction (only for extracted matrix types))
+# 7. ACN_factor (ACN/H2O factor - default is 1.1)
 
 # Function to join meta_data to data table
 meta_data_add <- function(meta_file, df_data, load = TRUE) {
