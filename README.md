@@ -28,6 +28,22 @@ The analysis types (an_type) are divided in the following groups: sample, cal, s
   
 Important: use these specific analysis type names and column names so follow up functions will work properly. The metadata file can be added to the raw data with the function 'meta_data_add' (see function section).
 
+## Calculate concentrations
+With the data loaded the conctrations for a specific compound can be calculated based on the area's measured by the machine. Several quality checks are built in to select the samples with a good response, these are: Ion ratio, Retention Time and Internal standard response. If a sample passes all three checks it is assumed to be valid.
+
+The Ion ratio (IR) is defined as the ratio between the main and second response peaks, this is compound specific. The mean IR is calculated based on the IR values of the calibration curve standards. The IR check is done with: (1 - alpha) * IRmean < IR_sample < (1 + alpha) * IRmean; (default alpha = 0.3). The same type of evaluation formulas are used for retention time and internal standard response. Assuming that the standards have good response in the machine.
+
+### lineair model fit
+The calibration curve is used to fit a linear model to relate peak area to concentration level. For each compound the MS machine has a sensitive range in which the relation is linear, accurate analysis can only be done within the linear domain. As first step the linearity of the calibration measurements is tested against the response of the median value in the calibration range, sample that deviate more than the delta.linearity factor (range 0.2 - 0.3) will not be included in the linear model estimate. Besides that sample concentrations that fall outside the linear domain can not be analysed further.
+
+A linear model is fit to the calibration points that fall within the linear domain. And the slope and intercept of this model are used to calculate the concentrations of the samples.
+
+### correction for dilutions
+Two different types of dilutions are used for the samples. The first (correction_factor) are the dilutions which are done during the standard laboratory preparations. For example: for soil matrix samples (S), 5 mL of H2O, 10 ml of ACN is added (A). From this extract only the ACN layer is pipetted, but a mixing with water of about 10% (B)is estimated. After that the extract is added 1:1 with milliq water (C) in a vial. This leads to a dilution factor of; 1/(S/(A*B)/C).
+
+The second type of dilutions is done to let the expected concentration of the sample fall within the linear domain of the MS machine. This is done by additionally diluting the extract. Because the linear domain of the machine is at least a factor 10, dilutions can also be made in steps of a factor 10.
+
+
 ## Functions
 
 ### load_raw_data()
