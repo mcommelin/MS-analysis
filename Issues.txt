@@ -1,3 +1,18 @@
 Issues MSAnalysis
 
 in calculate_calibration() linearity check can return NA - which should not happen
+
+Todo:
+
+- make branches; main - for the stable version
+                dev - for the version which we develop etc
+
+- calculate recovery --> std/b/c
+- plot_calibration selection
+- template (meta_data_file: QC = QC + Spike, QC origin)
+- add default values in functions where possible
+- clean code
+- warning messages
+
+GOAL: present first stable version on 03-03-2022
+  - send mail about presentation on 17-02-2022
