@@ -67,3 +67,32 @@ meta_data_add(meta_file, df_data, delim, load = TRUE)
   - load: TRUE = load file from specified location, FALSE = the data is already in R.
 
 Note: this function will drop all columns that are not needed for follow up functions in the analysis procedure.
+
+### calculate_calibration()
+
+calculate_calibration(df_data, IS, cal.ref.pnt, delta_linearity, alpha_IR)
+
+	- df_data: the result of meta_data_add()
+	- IS: name of the internal standard in a batch
+	- cal.ref.pnt: value of the reference point for linearity in the calibration curve
+	- delta_linearity: fraction of deviation from linearity which is allowed for calibration point in relation to the cal.ref.pnt
+	- alpha_IR: variation from mean IR for all calibration points, which is allowed for a single point/sample to be accepted.
+
+###  calibration_plot()
+
+calibration_plot(df_cal)
+
+	- df_cal: the result of calculate_calibration()
+
+### loq_calculation()
+
+loq_calculation(df_cal)
+
+	- df_cal: the result of calculate_calibration()
+
+### sample_concentration()
+
+sample_concentration(df_data, df_cal)
+
+	- df_data: result of meta_data_add()
+	- df_cal: the result of calculate_calibration()

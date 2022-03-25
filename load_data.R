@@ -1,6 +1,5 @@
-# load raw data form MS and GC machines and store is tidy table
+# load raw data form MS and GC machines and store in tidy table
 # Initialization -----------------
-
 library(tidyverse)
 
 
