@@ -35,3 +35,4 @@ df_data <- sample_concentration(df_data, df_cal)
 df_data <- calculate_recovery(df_data)
 
 # Summary of recovery performance
+recov_summary <- summary_recovery(df_data)

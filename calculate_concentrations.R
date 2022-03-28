@@ -69,23 +69,21 @@ calculate_recovery <- function(df_data, orig_alpha = 0.3) {
     select(tqs_code, compound, recov, orig_eff)
   df_data <- df_data %>%
     left_join(df_recov, by = c("tqs_code", "compound"))
+  
 return(df_data)
 }
 
 # summary overview of the recovery
 # # should matrix type be included?
-# summary_recovery <- function(df_data) {
-#   
-#   recov_summary <- df_data %>%
-#     group_by(batch, compound) %>%
-#     summarize(recov = mean(recov, na.rm = T),
-#            sd = sd(recov, na.rm = T),
-#            n = n(),
-#            n_out = sum(recov < 0.8 | recov > 1.2))
-# 
-#   recov_stats <- tibble(compound = compounds,
-#                         mean = round(sapply(pest_recov_s, mean, na.rm = T), digits =  1),
-#                         sd = round(sapply(pest_recov_s, sd, na.rm = T), digits = 4),
-#                         n = sapply(pest_recov_s, function(x){sum(!is.na(x))}))
-#   
-# }
+summary_recovery <- function(df_data, digits = 2) {
+
+  recov_summary <- df_data %>%
+    filter(!is.na(recov)) %>%
+    group_by(batch, compound) %>%
+    summarize(mean = round(mean(recov), digits = digits),
+           sd = round(sd(recov), digits = digits),
+           n = n(),
+           n_out = sum(recov < 0.8 | recov > 1.2))
+
+return(recov_summary)
+}
