@@ -50,23 +50,42 @@ return(df_data)
 
 # needed: real concentration of QC samples
 # reference to original sample if available to compensate
-recovery <- function(df_data, orig_alpha = 0.3) {
-
+calculate_recovery <- function(df_data, orig_alpha = 0.3) {
 
 # select original samples of QC's
-  origin_s <- df_conc %>%
+  origin_s <- df_data %>%
     select(sample_text, sample_conc, compound) %>%
     rename(origin = sample_text, samp_conc_o = sample_conc) %>%
     mutate(samp_conc_o = if_else(samp_conc_o < 0, 0, samp_conc_o))
 # calculate recovery
-  df_recov <- df_conc %>%
+  df_recov <- df_data %>%
     filter(an_type == "QC") %>%
     left_join(origin_s, by = c("origin", "compound")) %>%
-    distinct() %>%
-    mutate(samp_conc_o = if_else(is.na(samp_conc_o), 0, samp_conc_o)) %>%
     distinct(tqs_code, compound, .keep_all = T) %>%
-    mutate(recov = (sample_conc - samp_conc_o) / real_conc,
+    mutate(samp_conc_o = if_else(is.na(samp_conc_o), 0, samp_conc_o),
+           recov = (sample_conc - samp_conc_o) / real_conc,
            orig_eff = samp_conc_o / real_conc,
-           recov = if_else(orig_eff > orig_alpha, NaN, recov)) # when original conc is >30% QC is not valid
-return(df_recov)
+           recov = if_else(orig_eff > orig_alpha, NaN, recov)) %>% # when original conc is >30% QC is not valid
+    select(tqs_code, compound, recov, orig_eff)
+  df_data <- df_data %>%
+    left_join(df_recov, by = c("tqs_code", "compound"))
+return(df_data)
 }
+
+# summary overview of the recovery
+# # should matrix type be included?
+# summary_recovery <- function(df_data) {
+#   
+#   recov_summary <- df_data %>%
+#     group_by(batch, compound) %>%
+#     summarize(recov = mean(recov, na.rm = T),
+#            sd = sd(recov, na.rm = T),
+#            n = n(),
+#            n_out = sum(recov < 0.8 | recov > 1.2))
+# 
+#   recov_stats <- tibble(compound = compounds,
+#                         mean = round(sapply(pest_recov_s, mean, na.rm = T), digits =  1),
+#                         sd = round(sapply(pest_recov_s, sd, na.rm = T), digits = 4),
+#                         n = sapply(pest_recov_s, function(x){sum(!is.na(x))}))
+#   
+# }

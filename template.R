@@ -12,7 +12,7 @@ source("calibration_calculation_visualsation.R")
 df_data <- load_raw_data("test2")
 
 # add meta data
-df_data <- meta_data_add("test1_meta.txt", df_data, delim = "/")
+#df_data <- meta_data_add("test1_meta.txt", df_data, delim = "/")
 df_data <- meta_data_add("meta_test2.txt", df_data, delim = " ")
 
 # Calibration ----------------------
@@ -23,13 +23,15 @@ IS <- "13C_caffeine"
 df_cal <- calculate_calibration(df_data, IS, 3.125, 0.3, 0.3)
 
 #plot linear fit for each compound
-calibration_plot(df_cal)
+#calibration_plot(df_cal)
 
 #loq calculation
 df_loq <- loq_calculation(df_cal)
 
 # Sample concentrations ----------------------
-df_conc <- sample_concentration(df_data, df_cal)
+df_data <- sample_concentration(df_data, df_cal)
 
 # Recovery
-df_recov <- recovery(df_conc)
+df_data <- calculate_recovery(df_data)
+
+# Summary of recovery performance
