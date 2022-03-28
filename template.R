@@ -9,7 +9,7 @@ source("calibration_calculation_visualsation.R")
 
 # Load data ------------
 # load the raw data files obtained from MassLynx
-df_data <- load_raw_data("test2")
+df_data <- load_raw_data("test1")
 
 # add meta data
 df_data <- meta_data_add("test1_meta.txt", df_data, delim = "/")

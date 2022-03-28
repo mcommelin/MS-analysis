@@ -25,7 +25,7 @@ calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, al
   df_data=subset(df_data, compound %!in% IS)
   
   for (b in seq_along(batch.list)){
-    compound.batch.list[[b]]=compound.batch.list[[b]][compound.batch.list[[b]]!=IS[b]]
+    compound.batch.list[[b]] <- compound.batch.list[[b]][compound.batch.list[[b]]!=IS]
   }
   
   
@@ -52,12 +52,12 @@ calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, al
       
       # * Calibration linearity ----
       temp.cal.bc= temp.cal.bc %>%
-        mutate( area.ref.mean = mean( area1[temp.cal.bc$cal.level==cal.ref.pnt[b]]),
-                linearity=area1 *cal.ref.pnt[b] /cal.level /area.ref.mean,
+        mutate( area.ref.mean = mean( area1[temp.cal.bc$cal.level==cal.ref.pnt]),
+                linearity=area1 *cal.ref.pnt /cal.level /area.ref.mean,
                 linearity.ck=if_else(linearity> (1-delta_linearity) & linearity< (1+delta_linearity), "1","0"),
                 
                 # * Ion Ratio reference  ----
-                IR_ref0=mean( IR[temp.cal.bc$cal.level==cal.ref.pnt[b]]),  # First take IR of the ref cal point for ref
+                IR_ref0=mean( IR[temp.cal.bc$cal.level==cal.ref.pnt]),  # First take IR of the ref cal point for ref
                 IR_ck0=if_else(IR> 0.5*IR_ref0 & IR< 1.5*IR_ref0, "1","0"), # cut out all cal not in .5-1.5 IR_ref0
                 
                 IR_ref=mean(subset( temp.cal.bc, linearity.ck=="1" & IR_ck0=="1" )$IR), # Calculate Ion Ration reference with the calibration in the linearity range and .55-1.45 IR_ref0
