@@ -87,3 +87,17 @@ summary_recovery <- function(df_data, digits = 2) {
 
 return(recov_summary)
 }
+
+# correct sample concentrations for recovery
+# recovery_correction <- function(df_data, recov_summary) {
+#   d1 <- as.matrix(lc_multi[5:35])
+#   v1 <- as.matrix(recov_stats[2])
+#   
+#   lc_matrix <- as_tibble(sweep(d1, 2, v1, FUN = "/")) %>%
+#     bind_cols(lc_multi[1:4]) %>%
+#     mutate(across(starts_with("conc_"), ~ if_else(. < -500, -999, .))) %>%
+#   
+#   df_data <- df_data %>%
+#     mutate(cor_sample_conc = )
+#   
+# }
