@@ -1,7 +1,7 @@
 
 # Description of the function
 
-calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity, alpha_IR) {
+calculate_calibration <- function( df_data, IS, cal.ref.pnt, delta_linearity = 0.3, alpha_IR = 0.3) {
   
   '%!in%' <- function(x,y)!('%in%'(x,y))
   

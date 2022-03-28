@@ -9,7 +9,7 @@ source("calibration_calculation_visualsation.R")
 
 # Load data ------------
 # load the raw data files obtained from MassLynx
-df_data <- load_raw_data("test1")
+df_data <- load_raw_data("test2")
 
 # add meta data
 df_data <- meta_data_add("test1_meta.txt", df_data, delim = "/")
@@ -17,10 +17,10 @@ df_data <- meta_data_add("meta_test2.txt", df_data, delim = " ")
 
 # Calibration ----------------------
 # give name of internal standard
-IS <- "13C_Caffeine"
+IS <- "13C_caffeine"
 
 # select calibration samples and fit linear models
-df_cal <- calculate_calibration(df_data, IS, 1, 0.3, 0.3)
+df_cal <- calculate_calibration(df_data, IS, 3.125, 0.3, 0.3)
 
 #plot linear fit for each compound
 calibration_plot(df_cal)
