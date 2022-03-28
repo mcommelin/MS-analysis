@@ -52,25 +52,21 @@ return(df_data)
 # reference to original sample if available to compensate
 recovery <- function(df_data, orig_alpha = 0.3) {
 
-# how to obtain real_conc and origin
-  # from meta_data_add of with a new meta_add???
 
 # select original samples of QC's
-  origin_s <- df_data %>%
-    select(an_name, samp_conc) %>%
-    rename(origin = an_name, samp_conc_o = samp_conc) %>%
+  origin_s <- df_conc %>%
+    select(sample_text, sample_conc, compound) %>%
+    rename(origin = sample_text, samp_conc_o = sample_conc) %>%
     mutate(samp_conc_o = if_else(samp_conc_o < 0, 0, samp_conc_o))
-  QC_meta <- df_data %>%
+# calculate recovery
+  df_recov <- df_conc %>%
     filter(an_type == "QC") %>%
-    left_join(origin_s, by = "origin") %>%
-    select(an_name, origin, samp_conc_o)
-  
-df_recov <- df_data %>%
-  filter(an_type == "curve" | an_type == "QC" | an_type == "point") %>%
-  left_join(QC_meta, by = "an_name") %>% # should include real_conc and samp_conc_o
-  distinct(an_code, .keep_all = T) %>%
-  mutate(recov = (samp_conc - samp_conc_o) / real_conc,
-         orig_eff = samp_conc_o / real_conc,
-         recov = if_else(orig_eff > orig_alpha, NaN, recov)) # when original conc is >30% QC is not valid
+    left_join(origin_s, by = c("origin", "compound")) %>%
+    distinct() %>%
+    mutate(samp_conc_o = if_else(is.na(samp_conc_o), 0, samp_conc_o)) %>%
+    distinct(tqs_code, compound, .keep_all = T) %>%
+    mutate(recov = (sample_conc - samp_conc_o) / real_conc,
+           orig_eff = samp_conc_o / real_conc,
+           recov = if_else(orig_eff > orig_alpha, NaN, recov)) # when original conc is >30% QC is not valid
 return(df_recov)
 }

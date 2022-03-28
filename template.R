@@ -30,3 +30,6 @@ df_loq <- loq_calculation(df_cal)
 
 # Sample concentrations ----------------------
 df_conc <- sample_concentration(df_data, df_cal)
+
+# Recovery
+df_recov <- recovery(df_conc)
